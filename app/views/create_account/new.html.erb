@@ -1,6 +1,8 @@
 <div class="container">
     <h1 class="center">Create Account</h1>
+    
     <div class="row">
+        
         <%= form_for(:user, :url => {:controller => 'create_account', :action => 'create'}) do |f| %>
             <p> Email:</br> <%= f.text_field :email%> </p>
             <p> Password:</br> <%= f.password_field :password%></p>
@@ -8,46 +10,17 @@
             <p> Preferred Name:</br> <%= f.text_field :preferred_name%> </p>
             <p> Phone Number:</br> <%= f.text_field :phone_number%> </p>
             <%= f.submit :Signup %>
-          <% end %>
-        <!--
-        <form action="/create_account/create" class="col s12">
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="email" type="email" class="validate" name="email">
-                    <label for="email" data-error="Invalid Email">Email</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate" name="password">
-                  <label for="password">Password</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                  <input id="password-confirm" type="password" class="validate" name="confirm_password">
-                  <label for="password-confirm">Confirm Password</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                  <input id="name" type="text" class="validate" name="preferred_name">
-                  <label for="name">Preferred Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                  <input id="phone" type="tel" class="validate" name="phone">
-                  <label for="phone">Phone</label>
-                </div>
-            </div>
-            <div class="row">
-                <a href="/create_account/create" class="waves-effect waves-light btn col s12">Create Account</a>
-            </div>
-            <div>
-                <input type="submit" />
-            </div>
-        </form>
-        -->
+        <% end %>
+        
+        <% if @user.errors.any? %>
+	        <ul class="Signup_Errors">
+		        <% for message_error in @user.errors.full_messages %>
+			        <li>* <%= message_error %></li>
+	  	        <% end %>
+	        </ul>
+        <% end %>
+    
     </div>
 </div>
+        
+
