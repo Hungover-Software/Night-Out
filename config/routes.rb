@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get 'create_account/new'
+  get 'create_account' => 'create_account#new'
   post 'create_account/create'
+  
+  #get 'home/:id'
+  get 'home/send_friend_request'
 
   get 'welcome/index'
 
