@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   post 'create_account/create'
   
   #get 'home/:id'
-  get 'home/send_friend_request'
+  post 'home/send_friend_request'
+  get 'home/friends'
 
   get 'welcome/index'
 
