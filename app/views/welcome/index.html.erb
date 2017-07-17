@@ -1,4 +1,5 @@
 
+<!--
 <div class="container">
     <h1 class="center">Sign In</h1>
     <div class="row">
@@ -31,24 +32,16 @@
         </div>
     </div>
 </div>
-
-    <h1 class="center">Login</h1>
+-->
+    <h1 class="center">Sign In</h1>
     
     <div class="row">
         
-        <%= form_for(:user, :url => {:controller => 'welcome_controller', :action => 'login_attempt'}) do |f| %>
+        <%= form_for(:user, :url => {:controller => 'welcome', :action => 'login_attempt'}) do |f| %>
             <p> Email:</br> <%= f.text_field :email%> </p>
             <p> Password:</br> <%= f.password_field :password%></p>
-            <%= f.submit :Signin %>
+            <%= f.submit :submit %>
         <% end %>
         
-        <% if @user.errors.any? %>
-	        <ul class="Signin_Errors">
-		        <% for message_error in @user.errors.full_messages %>
-			        <li>* <%= message_error %></li>
-	  	        <% end %>
-	        </ul>
-        <% end %>
-    
     </div>
 </div>
