@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'home_page/landing_page'
+
+  get 'create_event/create_event'
+
+  get 'fp/forgot_password'
+ 
   get 'create_account/new'
   post 'create_account/create'
 
