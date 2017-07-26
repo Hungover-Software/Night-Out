@@ -1,3 +1,5 @@
 class Friend < ApplicationRecord
-    has_many :user
+    # attr_accessor :user_sender_id
+    # attr_accessor :user_receiver_id
+    # attr_accessor :accepted
 end

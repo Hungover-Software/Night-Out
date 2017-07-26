@@ -1,0 +1,26 @@
+<h2>Incoming Friend Requests</h2>
+
+<h2>Pending Requests</h2>
+
+<h2>Friends</h2>
+<%= @friends.each do |friend| %>
+    
+<% end %>
+
+<%= form_for(:friend, :url => {:controller => 'home', :action => 'send_friend_request'}, :html => {:class => 'col s12'}) do |f| %>
+    <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :sender_email, :class => 'validate' %>
+          <label for="friend_sender_email">Your Email</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :receiver_email, :class => 'validate' %>
+          <label for="friend_receiver_email">Friend Email</label>
+        </div>
+    </div>
+    <div class="row">
+        <%= f.submit 'Add Friend', :class => 'waves-effect waves-light btn col s12' %>
+    </div>
+<% end %>

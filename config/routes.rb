@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  get 'create_account/new'
+  get 'create_account' => 'create_account#new'
   post 'create_account/create'
+  
+  #get 'home/:id'
+  post 'home/send_friend_request'
+  get 'home/friends'
 
   get 'forgot_password' => 'fp#forgot_password'
   get 'create_event' => 'create_event#create_event'
-
-  get 'welcome/index'
 
   post 'welcome/login_attempt'
   match 'login', to: 'welcome#index', via: 'get'
