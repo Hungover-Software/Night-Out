@@ -1,47 +1,39 @@
 
-<!--
+
 <div class="container">
     <h1 class="center">Sign In</h1>
     <div class="row">
-        <form class="col s12">
+        <%= form_for(:user, :url => {:controller => 'welcome', :action => 'login_attempt'}, :html => {:class => 'col s12'}) do |f| %>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="username" type="text" class="validate">
+                    <%= f.text_field :email, :class => 'validate' %>
                     <label for="username">Username</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
+                  <%= f.password_field :password, :class => 'validate' %>
                   <label for="password">Password</label>
                 </div>
                 <a class="right blue-grey-text darken-2" href="/forgot_password">Forgot Password?</a>
             </div>
             <div class="row">
-                <a class="waves-effect waves-light btn col s12">Sign In</a>
+                <%= f.submit :submit, :class => 'waves-effect waves-light btn col s12' %>
             </div>
-        </form>
-    </div>
-    
-    <div class="row center">
-        <div class="col s12">
-            New to Night Out?
-        </div>
-        <div class="col s12">
-            <a class="waves-effect waves-light btn" href="/create_account/create">Create Account</a>
-        </div>
-    </div>
-</div>
--->
-    <h1 class="center">Sign In</h1>
-    
-    <div class="row">
-        
-        <%= form_for(:user, :url => {:controller => 'welcome', :action => 'login_attempt'}) do |f| %>
-            <p> Email:</br> <%= f.text_field :email%> </p>
-            <p> Password:</br> <%= f.password_field :password%></p>
-            <%= f.submit :submit %>
         <% end %>
-        
     </div>
+    
 </div>
+
+<!--    <h1 class="center">Sign In</h1>-->
+    
+<!--    <div class="row">-->
+        
+<!--        <%= form_for(:user, :url => {:controller => 'welcome', :action => 'login_attempt'}, :html => {:class => 'col s12'}) do |f| %>-->
+<!--            <p> Email:</br> <%= f.text_field :email%> </p>-->
+<!--            <p> Password:</br> <%= f.password_field :password%></p>-->
+<!--            <%= f.submit :submit %>-->
+<!--        <% end %>-->
+        
+<!--    </div>-->
+<!--</div>-->
