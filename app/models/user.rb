@@ -19,7 +19,7 @@ class User < ApplicationRecord
     
     validates_length_of :password, :in => 6..20, :on => :create
     
-    attr_accessible :username, :email, :password, :password_confirmation
+    attr_accessor :username, :email, :password, :password_confirmation
     
     def self.authenticate(login_email="", login_password="") #login_email was username_or_email
 
