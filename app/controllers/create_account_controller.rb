@@ -15,14 +15,18 @@ class CreateAccountController < ApplicationController
     #DEBUG
     puts params.inspect
     
-    @user.save
+    #@user.save
     
     #DEBUG
     self.list
   end
   
   def user_params
-    params.require(:user).permit(:email, :password, :preferred_name, :phone_number)
+    params.require(:user).permit(:email, encrypt_password(:password), :preferred_name, :phone_number)
+    
+    
+    
   end
   
+
 end

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    attr_accessor :password
+ 
 
     before_save :encrypt_password
     after_save :clear_password
@@ -16,7 +16,7 @@ class User < ApplicationRecord
     
     validates_length_of :password, :in => 6..20, :on => :create
     
-    attr_accessible :username, :email, :password, :password_confirmation
+    attr_accessor :username, :email, :password, :password_confirmation
     
     def self.authenticate(login_email="", login_password="") #login_email was username_or_email
 
@@ -33,20 +33,27 @@ class User < ApplicationRecord
     end   
     
     def match_password(login_password="")
-    
+        
+        
         encrypted_password == BCrypt::Engine.hash_secret(login_password, salt)
+        if( encrypt_password == login_password)
+            return true
+        end
+        else
+            return false
+        end
     
     end
     
-    def encrypt_password
+    def encrypt_password(new_password="")
     
-        unless password.blank?
+        
     
-            self.salt = BCrypt::Engine.generate_salt
+            salt = BCrypt::Engine.generate_salt
     
-            self.encrypted_password = BCrypt::Engine.hash_secret(password, salt)
+            encrypted_password = BCrypt::Engine.hash_secret(new_password, salt)
+            return encrypted_password
     
-        end
     end
     
     
@@ -55,4 +62,4 @@ class User < ApplicationRecord
         self.password = nil
     
     end
-end
+

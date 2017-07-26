@@ -20,15 +20,16 @@ class WelcomeController < ApplicationController
 
 
 		else
+			flash.notice = "Post successfully created"
 			flash[:notice] = "Invalid Username or Password"
         	flash[:color]= "invalid"
-			render "login"	
+			render "index"	
 		end
 	end
 
 	def logout
 		session[:user_id] = nil
-		redirect_to :action => 'login'
+		redirect_to :action => 'index'
 	end
 
 
