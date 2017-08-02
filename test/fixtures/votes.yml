@@ -1,11 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  suggestion: one
   user: one
   weight: 1
 
 two:
-  suggestion: two
   user: two
   weight: 1
