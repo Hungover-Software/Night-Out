@@ -2,7 +2,6 @@
     <h1 class="center">Create Account</h1>
     
     <div class="row">
-    
         <%= form_for(:user, :url => {:controller => 'create_account', :action => 'create'}, :html => {:class => 'col s12'}) do |f| %>
             <div class="row">
                 <div class="input-field col s12">
@@ -30,7 +29,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                  <%= f.telephone_field :phone_number, :class => 'validate' %>
+                  <%= f.telephone_field :phone, :class => 'validate' %>
                   <label for="user_phone_number">Phone</label>
                 </div>
             </div>
