@@ -12,14 +12,19 @@ class WelcomeController < ApplicationController
 	end
 
 	def login_attempt
-		authorized_user = User.authenticate(params[:login_email],params[:login_password])
+		puts "PARAMS!"
+		puts params.inspect
+		authorized_user = User.authenticate(params[:user][:email], params[:user][:password])
 		if authorized_user
+			puts "LOGGED IN!"
 			session[:user_id] = authorized_user.id
 			flash[:notice] = "Wow Welcome again, you logged in as #{authorized_user.username}"
-			redirect_to(:action => 'home')
+			#redirect_to(:action => 'home')
+			render "create"
 
 
 		else
+			puts "NOT LOGGED IN!"
 			flash.notice = "Post successfully created"
 			flash[:notice] = "Invalid Username or Password"
         	flash[:color]= "invalid"
