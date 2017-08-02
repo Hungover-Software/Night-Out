@@ -23,11 +23,7 @@ class User < ApplicationRecord
     
     #validates_length_of :password, :in => 6..20, :on => :create
     
-<<<<<<< HEAD
-    attr_accessor :username, :email, :password, :password_confirmation
-=======
     #attr_accessor :email, :password, :password_confirmation, :preferred_name, :phone
->>>>>>> Secure_password
     
 =begin
     def self.authenticate(email, password)

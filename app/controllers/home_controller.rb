@@ -2,6 +2,7 @@ class HomeController < ApplicationController
     
     def index
         @events = Events.where("user_id = ?", session[:current_user_id])
+        @events = []
     end
     
     def friends
