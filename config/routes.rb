@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+
+  get 'vp/Voting_page'
+  get 'vp/new'
+
   get 'create_account' => 'create_account#new'
   post 'create_account/create'
   

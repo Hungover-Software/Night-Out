@@ -1,0 +1,48 @@
+<head>
+<style>
+.boxed {
+  border: 2px solid grey ;
+}
+.blacktext {
+        color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="center">Voting</h2>
+
+
+<input id="user_options_1" name="user[options]" type="radio" value="true" />
+<label class="collection_radio_buttons blacktext" for="user_options_1">Location1</label> <br>
+<input id="user_options_2" name="user[options]" type="radio" value="true" />
+<label class="collection_radio_buttons blacktext" for="user_options_2">Location2</label><br>
+<input id="user_options_3" name="user[options]" type="radio" value="false" />
+<label class="collection_radio_buttons blacktext" for="user_options_3">Location3</label><br>
+<div class="col s12">
+        <a class="waves-effect waves-light btn" href="/vp/new">Submit</a>
+</div><br>
+<h5> Comments </h5>  
+
+<form action="/html/tags/html_form_tag_action.cfm" method="post">
+<form>
+<textarea id="words" rows="10" cols="20" placeholder="Type here..."></textarea>
+<div class="col s12">
+  <a class="waves-effect waves-light btn" input type="button" 
+  onclick="getwords()" >Send</a>
+</div><br>
+<p id="para"></p>
+</form>
+
+
+</form>
+
+<script type="text/javascript">
+function getwords() {
+  text = words.value;
+  document.getElementById("para").innerHTML += '<p>' + text
+  document.getElementById("words").value=""
+}
+</script>
+</div>
