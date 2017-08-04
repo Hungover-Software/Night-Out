@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   #get 'home/:id'
   post 'home/send_friend_request'
   get 'home/friends'
+  get 'home', to: 'home#index'
 
   get 'forgot_password' => 'fp#forgot_password'
   get 'create_event' => 'create_event#create_event'

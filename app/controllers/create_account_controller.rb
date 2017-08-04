@@ -23,7 +23,7 @@ class CreateAccountController < ApplicationController
     if @user.save
     	#flash[:notice] = "You Signed up successfully"
       #flash[:color]= "valid"
-      render "create"
+      redirect_to login_path
     else
       #flash[:notice] = "Form is invalid"
       #flash[:color]= "invalid"
