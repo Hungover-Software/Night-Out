@@ -22,3 +22,10 @@
         </li>
     </ul>
 </div>
+
+<!-- Template for showing events -->
+<% if @events.any? %>
+  # @events.each do |event|
+<% else %>
+  # no events
+<% end %>

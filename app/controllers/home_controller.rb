@@ -91,5 +91,9 @@ class HomeController < ApplicationController
             friend.destroy
         end
     end
+    
+    def event_creation
+        redirect_to 'create_event'
+    end
 
 end
