@@ -5,20 +5,31 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
     <nav class="blue-grey">
       <div class="nav-wrapper container">
         <% if logged_in? %>
-          <%= link_to "Night Out", home_path, :class => "brand-logo" %>
+          <%= link_to "Night Out", home_path, :class => "brand-logo center" %>
         <% else %>
           <%= link_to "Night Out", login_path, :class => "brand-logo" %>
         <% end %>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <% if logged_in? %>
+          <ul class="left hide-on-med-and-down">
+            <li><%= link_to "Your Events", home_path %></li>
+            <li><a href="#">Friends</a></li>
+          </ul>
+        <% end %>
         <ul class="right hide-on-med-and-down">
           <% if logged_in? %>
+            <li><a href="#">Account</a></li>
             <li><%= link_to "Log out", logout_path, method: :delete %></li>
           <% else %>
             <li><a href="/">Sign In</a></li>
@@ -27,6 +38,10 @@
         </ul>
         <ul class="side-nav" id="nav-mobile">
           <% if logged_in? %>
+            <li><%= link_to "Your Events", home_path %></li>
+            <li><a href="#">Friends</a></li>
+            <li><%= link_to "Create Event", create_event_path, :class => "waves-effect waves-light btn blue-grey lighten-1" %></li>
+            <li><a href="#">Account</a></li>
             <li><%= link_to "Log out", logout_path, method: :delete %></li>
           <% else %>
             <li><a href="/">Sign In</a></li>
@@ -42,5 +57,11 @@
     <div class="container">
       <%= yield %>
     </div>
+    
+    <script>
+      $(document).ready(function() {
+        $(".button-collapse").sideNav();
+      });
+    </script>
   </body>
 </html>
