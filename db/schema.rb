@@ -10,23 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705225515) do
+ActiveRecord::Schema.define(version: 20170801232901) do
 
   create_table "comments", force: :cascade do |t|
-    t.integer "event_id"
+    t.string "message"
+    t.datetime "timestamp"
     t.integer "user_id"
-    t.string "comment"
+    t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_comments_on_event_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "events", force: :cascade do |t|
+  create_table "event_invites", force: :cascade do |t|
     t.integer "user_id"
-    t.string "name"
+    t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_event_invites_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
+    t.date "date"
+    t.time "time"
+    t.integer "event_invite_id"
+    t.integer "comment_id"
+    t.integer "poll_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comment_id"], name: "index_events_on_comment_id"
+    t.index ["event_invite_id"], name: "index_events_on_event_invite_id"
+    t.index ["poll_id"], name: "index_events_on_poll_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -38,54 +55,36 @@ ActiveRecord::Schema.define(version: 20170705225515) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "group_links", force: :cascade do |t|
-    t.integer "group_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_group_links_on_group_id"
-    t.index ["user_id"], name: "index_group_links_on_user_id"
-  end
-
   create_table "groups", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
+    t.integer "users"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
+  create_table "options", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
+    t.integer "vote_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_options_on_user_id"
+    t.index ["vote_id"], name: "index_options_on_vote_id"
+  end
+
   create_table "polls", force: :cascade do |t|
-    t.integer "event_id"
-    t.boolean "open"
     t.string "name"
+    t.integer "option_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_polls_on_event_id"
-  end
-
-  create_table "suggestions", force: :cascade do |t|
-    t.integer "poll_id"
-    t.integer "user_id"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["poll_id"], name: "index_suggestions_on_poll_id"
-    t.index ["user_id"], name: "index_suggestions_on_user_id"
-  end
-
-  create_table "user_to_events", force: :cascade do |t|
-    t.integer "event_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_user_to_events_on_event_id"
-    t.index ["user_id"], name: "index_user_to_events_on_user_id"
+    t.index ["option_id"], name: "index_polls_on_option_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
+    t.string "email", null: false
+    t.string "password_digest", null: false
     t.string "preferred_name"
     t.string "phone"
     t.datetime "created_at", null: false
@@ -93,12 +92,10 @@ ActiveRecord::Schema.define(version: 20170705225515) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer "suggestion_id"
     t.integer "user_id"
     t.integer "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["suggestion_id"], name: "index_votes_on_suggestion_id"
     t.index ["user_id"], name: "index_votes_on_user_id"
   end
 

@@ -3,7 +3,9 @@
 one:
   user: one
   name: MyString
+  users: 1
 
 two:
   user: two
   name: MyString
+  users: 1

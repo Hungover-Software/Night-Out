@@ -1,4 +1,4 @@
 class Vote < ApplicationRecord
-  belongs_to :suggestion
+  belongs_to :option
   belongs_to :user
 end

@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  event: one
+  name: MyString
   user: one
+  vote: one
 
 two:
-  event: two
+  name: MyString
   user: two
+  vote: two
