@@ -1,9 +1,9 @@
-
+<% provide(:title, "Log in") %>
 
 <div class="container">
     <h1 class="center">Sign In</h1>
     <div class="row">
-        <%= form_for(:user, :url => {:controller => 'welcome', :action => 'login_attempt'}, :html => {:class => 'col s12'}) do |f| %>
+        <%= form_for(:session, url: login_path, :html => {:class => 'col s12'}) do |f| %>
             <div class="row">
                 <div class="input-field col s12">
                     <%= f.text_field :email, :class => 'validate' %>
@@ -24,16 +24,3 @@
     </div>
     
 </div>
-
-<!--    <h1 class="center">Sign In</h1>-->
-    
-<!--    <div class="row">-->
-        
-<!--        <%= form_for(:user, :url => {:controller => 'welcome', :action => 'login_attempt'}, :html => {:class => 'col s12'}) do |f| %>-->
-<!--            <p> Email:</br> <%= f.text_field :email%> </p>-->
-<!--            <p> Password:</br> <%= f.password_field :password%></p>-->
-<!--            <%= f.submit :submit %>-->
-<!--        <% end %>-->
-        
-<!--    </div>-->
-<!--</div>-->
