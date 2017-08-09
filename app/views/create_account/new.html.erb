@@ -2,6 +2,14 @@
     <h1 class="center">Create Account</h1>
     
     <div class="row">
+        <% if @user.errors.any? %>
+	        <ul class="Signup_Errors">
+		        <% for message_error in @user.errors.full_messages %>
+			        <li>* <%= message_error %></li>
+	  	        <% end %>
+	        </ul>
+        <% end %>
+        
         <%= form_for(:user, :url => {:controller => 'create_account', :action => 'create'}, :html => {:class => 'col s12'}) do |f| %>
             <div class="row">
                 <div class="input-field col s12">
@@ -36,14 +44,6 @@
             <div class="row">
                 <%= f.submit :Signup, :class => 'waves-effect waves-light btn col s12 blue-grey lighten-1' %>
             </div>
-        <% end %>
-        
-        <% if @user.errors.any? %>
-	        <ul class="Signup_Errors">
-		        <% for message_error in @user.errors.full_messages %>
-			        <li>* <%= message_error %></li>
-	  	        <% end %>
-	        </ul>
         <% end %>
 
     </div>

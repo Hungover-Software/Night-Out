@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(version: 20170801232901) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string "name"
-    t.integer "user_id"
-    t.date "date"
-    t.time "time"
+    t.string "name", null: false
+    t.integer "user_id", null: false
+    t.date "date", null: false
+    t.time "time", null: false
     t.integer "event_invite_id"
     t.integer "comment_id"
     t.integer "poll_id"
