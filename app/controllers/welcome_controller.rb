@@ -1,16 +1,34 @@
+# Night Out event planning application
+# Hungover Software
+# University of Nebraska Omaha
+# CSCI-4830-860 SU17
+# Welcome Controller (WelcomeController)
+# 
+# Authors:
+
 class WelcomeController < ApplicationController
-  
-  before_action :authenticate_user, :except => [:index, :login, :login_attempt, :logout]
+	before_action :authenticate_user, :except => [:index, :login, :login_attempt, :logout]
 	before_action :save_login_state, :only => [:index, :login, :login_attempt]
+  	# Method index
+  	# Parameters:
+  	# 
+  	# Output:
+  	def index
+    		#home Page
+  	end
   
-  def index
-    #home Page
-  end
-  
+	# Method create
+  	# Parameters:
+  	# 
+  	# Output:
 	def create
 			#Profile Page
 	end
-
+	
+	# Method index
+  	# Parameters:
+  	# 
+  	# Output:
 	def login_attempt
 		puts "PARAMS!"
 		puts params.inspect
@@ -32,10 +50,13 @@ class WelcomeController < ApplicationController
 		end
 	end
 
+	# Method index
+  	# Parameters:
+  	# 
+  	# Output:
 	def logout
 		session[:user_id] = nil
 		redirect_to :action => 'index'
 	end
-
 
 end
