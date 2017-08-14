@@ -3,7 +3,7 @@
 # University of Nebraska Omaha
 # CSCI-4830-860 SU17
 # Class: User Model (User)
-# 
+# This model validates the input from the createaccount/new.html.erb web form for account signup.
 # Authors: Nathan Lyon,
 
 class User < ApplicationRecord
