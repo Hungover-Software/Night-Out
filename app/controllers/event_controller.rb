@@ -89,13 +89,17 @@ class EventController < ApplicationController
     end
     
     def accept_invite
-        @event = Event.find(params[:id])
-        puts params.inspect
+        @invite = EventInvite.where(:event_id => params[:id], :user_id => session[:user_id])[0]
+        @invite.accepted = true
+        @invite.save
+        
+        redirect_to :action => "show", :id => params[:id]
     end
     
     def decline_invite
-        @event = Event.find(params[:id])
-        puts params.inspect
+        EventInvite.where(:event_id => params[:id], :user_id => session[:user_id])[0].destroy
+        
+        redirect_to home_path
     end
     
     def event_params
