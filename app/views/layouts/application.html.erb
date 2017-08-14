@@ -29,7 +29,7 @@
         <% end %>
         <ul class="right hide-on-med-and-down">
           <% if logged_in? %>
-            <li><a href="#">Account</a></li>
+            <li>Welcome, <%= @current_user.preferred_name %> (<%= @current_user.email %>)</li>
             <li><%= link_to "Log out", logout_path, method: :delete %></li>
           <% else %>
             <li><a href="/">Sign In</a></li>
@@ -41,7 +41,7 @@
             <li><%= link_to "Your Events", home_path %></li>
             <li><%= link_to "Friends", friends_path %></li>
             <li><%= link_to "Create Event", create_event_path, :class => "waves-effect waves-light btn blue-grey lighten-1" %></li>
-            <li><a href="#">Account</a></li>
+            <li class="container black-text">Logged in as: <%= @current_user.preferred_name %> (<%= @current_user.email %>)</li>
             <li><%= link_to "Log out", logout_path, method: :delete %></li>
           <% else %>
             <li><a href="/">Sign In</a></li>
