@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170801232901) do
   create_table "event_invites", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "event_id", null: false
-    t.boolean "status", null: false
+    t.boolean "accepted", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_event_invites_on_event_id"

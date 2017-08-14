@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   
   get 'events/:id/', to: 'event#show', as: 'event'
   post 'events/:id/invite', to: 'event#invite'
+  post 'events/:id/accept_invite', to: 'event#accept_invite'
+  post 'events/:id/decline_invite', to: 'event#decline_invite'
   
   #get 'welcome/index'
   root 'sessions#new'

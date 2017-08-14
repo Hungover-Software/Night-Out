@@ -5,7 +5,16 @@ class EventController < ApplicationController
     end
     
     def show
-        @event = Event.find(params[:id])
+        @event = Event.includes(:event_invites).find(params[:id])
+        
+        @admin = @event.user_id == session[:user_id]
+        
+        if @admin
+            @accepted = true
+        else
+            @accepted = @event.event_invites.select { |invite| invite.user_id == session[:user_id] }[0].status
+        end
+        
         puts @event.inspect
     end
     
@@ -25,7 +34,7 @@ class EventController < ApplicationController
         @event.destroy
     end
     
-    def addPoll
+    def add_poll
         poll = Poll.new(poll_params)
         poll.event_id = @event.id
         poll.save
@@ -33,7 +42,7 @@ class EventController < ApplicationController
         redirect_to home_path
     end
     
-    def addPoll(params)
+    def add_poll(params)
         poll = Poll.new(:name => params[:name])
         poll.event_id = params[:event_id]
         poll.save
@@ -41,14 +50,14 @@ class EventController < ApplicationController
         #redirect_to home_path
     end
     
-    def removePoll(params)
+    def remove_poll(params)
         Poll.find(params[:id]).destroy
     end
     
     def addOption
     end
     
-    def removeOption
+    def remove_option
     end
     
     def vote
@@ -63,7 +72,7 @@ class EventController < ApplicationController
     
     def invite
         @invite_user = User.where(:email => invite_params()[:email])[0]
-        @event_user = Event.find(params[:id])
+        @event = Event.find(params[:id])
         
         if @invite_user == nil
             return
@@ -71,7 +80,7 @@ class EventController < ApplicationController
             if @invite_user.id == session[:user_id]
                 return
             else
-                invite = EventInvite.new(:event_id => @event_user[:id], :user_id => @invite_user[:id], :status => false)
+                invite = EventInvite.new(:event_id => @event[:id], :user_id => @invite_user[:id], :status => false)
                 invite.save
             end
         end
@@ -79,22 +88,15 @@ class EventController < ApplicationController
         redirect_to home_path
     end
     
-    "def invite(params)
-        invite_user = User.where(:email => params[:email])[0]
-        
-        if invite_user == nil
-            return
-        else
-            #if invite_user.id == session[:user_id]
-                #return
-            #else
-                invite = EventInvite.new(:user_id => invite_user[:id], :event_id => params[:event_id], :status => false)
-                invite.save
-            #end
-        end
-        
-        #redirect_to home_path
-    end"
+    def accept_invite
+        @event = Event.find(params[:id])
+        puts params.inspect
+    end
+    
+    def decline_invite
+        @event = Event.find(params[:id])
+        puts params.inspect
+    end
     
     def event_params
         params.require(:user).permit(:name, :date, :time)
