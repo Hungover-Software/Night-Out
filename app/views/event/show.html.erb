@@ -2,10 +2,14 @@
 
 <% if not @admin and not @accepted %>
     <%= form_for(:event_invite, :url => {:controller => 'event', :action => 'accept_invite'}, :html => {:class => 'col s12'}) do |f| %>
-        <%= f.submit "Accept Invite", :class => 'waves-effect waves-light btn col s12 blue-grey lighten-1' %>
+        <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
+            Accept Invite
+        <% end %>
     <% end %>
     <%= form_for(:event_invite, :url => {:controller => 'event', :action => 'decline_invite'}, :html => {:class => 'col s12'}) do |f| %>
-        <%= f.submit "Decline Invite", :class => 'waves-effect waves-light btn col s12 blue-grey lighten-1' %>
+        <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
+            Decline Invite
+        <% end %>
     <% end %>
 <% end %>
 
@@ -15,5 +19,7 @@
         <%= f.email_field :email, :class => 'validate' %>
         <label data-error="Invalid Email">Email</label>
     </div>
-    <%= f.submit "Send Invite!", :class => 'waves-effect waves-light btn col s12 blue-grey lighten-1' %>
+    <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
+        Send Invite!
+    <% end %>
 <% end %>

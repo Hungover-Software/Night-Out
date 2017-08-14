@@ -42,7 +42,9 @@
                 </div>
             </div>
             <div class="row">
-                <%= f.submit :Signup, :class => 'waves-effect waves-light btn col s12 blue-grey lighten-1' %>
+                <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
+                    Signup
+                <% end %>
             </div>
         <% end %>
 
