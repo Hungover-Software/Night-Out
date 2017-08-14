@@ -13,8 +13,7 @@ class HomeController < ApplicationController
     #
     # Output:
     def index
-        #@events = Events.where("user_id = ?", session[:user_id])
-        @events = []
+        @events = Event.order("DATE(date) asc, TIME(time) asc").left_outer_joins(:event_invites).where("events.user_id = ? OR event_invites.user_id = ?", session[:user_id], session[:user_id])
     end
     
     # Method friends

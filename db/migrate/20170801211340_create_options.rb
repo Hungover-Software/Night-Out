@@ -1,9 +1,9 @@
 class CreateOptions < ActiveRecord::Migration[5.1]
   def change
     create_table :options do |t|
-      t.string :name
-      t.references :user, foreign_key: true
-      t.references :vote, foreign_key: true
+      t.string :name, :null => false
+      t.references :user, foreign_key: true, :null => false
+      t.references :poll, foreign_key: true, :null => false
 
       t.timestamps
     end

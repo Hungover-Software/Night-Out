@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 20170801232901) do
 
   create_table "comments", force: :cascade do |t|
-    t.string "message"
-    t.datetime "timestamp"
-    t.integer "user_id"
-    t.integer "event_id"
+    t.string "message", null: false
+    t.datetime "timestamp", null: false
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_comments_on_event_id"
@@ -24,26 +24,22 @@ ActiveRecord::Schema.define(version: 20170801232901) do
   end
 
   create_table "event_invites", force: :cascade do |t|
-    t.integer "user_id"
-    t.boolean "status"
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
+    t.boolean "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_invites_on_event_id"
     t.index ["user_id"], name: "index_event_invites_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
-    t.string "name"
-    t.integer "user_id"
-    t.date "date"
-    t.time "time"
-    t.integer "event_invite_id"
-    t.integer "comment_id"
-    t.integer "poll_id"
+    t.string "name", null: false
+    t.integer "user_id", null: false
+    t.date "date", null: false
+    t.time "time", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["comment_id"], name: "index_events_on_comment_id"
-    t.index ["event_invite_id"], name: "index_events_on_event_invite_id"
-    t.index ["poll_id"], name: "index_events_on_poll_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -65,21 +61,21 @@ ActiveRecord::Schema.define(version: 20170801232901) do
   end
 
   create_table "options", force: :cascade do |t|
-    t.string "name"
-    t.integer "user_id"
-    t.integer "vote_id"
+    t.string "name", null: false
+    t.integer "user_id", null: false
+    t.integer "poll_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["poll_id"], name: "index_options_on_poll_id"
     t.index ["user_id"], name: "index_options_on_user_id"
-    t.index ["vote_id"], name: "index_options_on_vote_id"
   end
 
   create_table "polls", force: :cascade do |t|
-    t.string "name"
-    t.integer "option_id"
+    t.string "name", null: false
+    t.integer "event_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["option_id"], name: "index_polls_on_option_id"
+    t.index ["event_id"], name: "index_polls_on_event_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -92,10 +88,12 @@ ActiveRecord::Schema.define(version: 20170801232901) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer "user_id"
     t.integer "weight"
+    t.integer "user_id", null: false
+    t.integer "option_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["option_id"], name: "index_votes_on_option_id"
     t.index ["user_id"], name: "index_votes_on_user_id"
   end
 

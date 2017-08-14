@@ -10,6 +10,7 @@
 class CreateAccountController < ApplicationController
   
   before_action :save_login_state, :only => [:new, :create]
+  skip_before_action :require_login, only: [:new, :create]
 
   # Method list
   # Parameters: None

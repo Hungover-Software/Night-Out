@@ -9,10 +9,12 @@ Rails.application.routes.draw do
   #get 'home/:id'
   post 'home/send_friend_request'
   get 'home/friends'
+  get 'home/events' => 'event#list'
   get 'home', to: 'home#index'
 
   get 'forgot_password' => 'fp#forgot_password'
-  get 'create_event' => 'create_event#create_event'
+  get 'new_event' => 'event#new'
+  post 'create_event' => 'event#create'
 
   post 'welcome/login_attempt'
   match 'index', to: 'welcome#index', via: 'get'

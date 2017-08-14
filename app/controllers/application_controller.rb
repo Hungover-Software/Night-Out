@@ -10,6 +10,8 @@
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :require_login
+  
   include SessionsHelper
   protected
   
@@ -40,4 +42,14 @@ class ApplicationController < ActionController::Base
       return true
     end
   end
+  
+  private
+  
+  def require_login
+    unless logged_in?
+      flash[:error] = "Not logged in!"
+      redirect_to login_url
+    end
+  end
+
 end
