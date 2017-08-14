@@ -6,6 +6,7 @@ class EventController < ApplicationController
     
     def show
         @event = Event.find(params[:id])
+        puts @event.inspect
     end
     
     def new
@@ -61,15 +62,16 @@ class EventController < ApplicationController
     end
     
     def invite
-        invite_user = User.where(:email => invite_params()[:email])
+        @invite_user = User.where(:email => invite_params()[:email])[0]
+        @event_user = Event.find(params[:id])
         
-        if invite_user == nil
+        if @invite_user == nil
             return
         else
-            if invite_user.id == session[:user_id]
+            if @invite_user.id == session[:user_id]
                 return
             else
-                invite = EventInvite.new(:user_id => invite_user[:id], :accepted => false)
+                invite = EventInvite.new(:event_id => @event_user[:id], :user_id => @invite_user[:id], :status => false)
                 invite.save
             end
         end
@@ -77,7 +79,7 @@ class EventController < ApplicationController
         redirect_to home_path
     end
     
-    def invite(params)
+    "def invite(params)
         invite_user = User.where(:email => params[:email])[0]
         
         if invite_user == nil
@@ -92,14 +94,14 @@ class EventController < ApplicationController
         end
         
         #redirect_to home_path
-    end
+    end"
     
     def event_params
         params.require(:user).permit(:name, :date, :time)
     end
     
     def invite_params
-        params.require(:user).permit(:email)
+        params.require(:event_invite).permit(:email)
     end
     
     def comment_params
