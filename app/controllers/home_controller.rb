@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
     
     def index
-        @events = Event.where("user_id = ?", session[:user_id])
+        @events = Event.order("DATE(date) asc, TIME(time) asc").left_outer_joins(:event_invites).where("events.user_id = ? OR event_invites.user_id = ?", session[:user_id], session[:user_id])
     end
     
     def friends
