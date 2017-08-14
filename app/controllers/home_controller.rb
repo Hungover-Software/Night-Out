@@ -1,15 +1,35 @@
+# Night Out event planning application
+# Hungover Software
+# University of Nebraska Omaha
+# CSCI-4830-860 SU17
+# Home Page Controller (HomeController)
+# Controls actions for the user's home page.
+# Authors: 
+
 class HomeController < ApplicationController
     
+    # Method index
+    # Parameters: None
+    #
+    # Output:
     def index
         #@events = Events.where("user_id = ?", session[:user_id])
         @events = []
     end
     
+    # Method friends
+    # parameters: None
+    #
+    # Output:
     def friends
         @friends = []
         #@fiends = Friends.where('(user_sender_id = ? or user_receiver_id = ?) and accepted = true', session[:current_user_id], session[:current_user_id])
     end
     
+    # Method send_friend_request
+    # Parameters: None
+    #
+    # Output:
     def send_friend_request
         # Grab an object from params to make life easier
         friend = params[:friend]
@@ -64,6 +84,10 @@ class HomeController < ApplicationController
         @friend_request.save
     end
     
+    # Method respond_to_friend_request
+    # Parameters: params
+    # 
+    # Output:
     def respond_to_friend_request(params)
         puts params.inspect
         if params[:response]
@@ -78,6 +102,10 @@ class HomeController < ApplicationController
         end
     end
     
+    # Method respond_to_friend_request
+    # Parameters: None
+    #
+    # Output:
     def respond_to_friend_request
         # Grab variable to make it look better
         friend = params[:friend]
