@@ -8,8 +8,8 @@
         <ul class="collection">
             <% @events.each do |event| %>
                 <li class="collection-item">
-                    <a href="#" style="color: black;">
-                        <div class="row" style="margin-bottom: 0;">
+                    <%= link_to(event) do %>
+                        <div class="row" style="margin-bottom: 0; color: black;">
                             <div class="col s2 blue-grey lighten-4">
                                 <center>
                                     <h5><%= event.date.strftime('%b') %></h5>
@@ -20,7 +20,7 @@
                                 <h4><%= event.name %></h4>
                             </div>
                         </div>
-                    </a>
+                    <% end %>
                 </li>
             <% end %>
         </ul>
