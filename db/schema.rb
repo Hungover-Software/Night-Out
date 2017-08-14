@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170801232901) do
+ActiveRecord::Schema.define(version: 20170814190110) do
 
   create_table "comments", force: :cascade do |t|
     t.string "message", null: false
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 20170801232901) do
     t.boolean "accepted", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_receiver_id"], name: "index_friends_on_user_receiver_id"
+    t.index ["user_sender_id"], name: "index_friends_on_user_sender_id"
   end
 
   create_table "groups", force: :cascade do |t|

@@ -17,12 +17,39 @@ class HomeController < ApplicationController
     end
     
     # Method friends
-    # parameters: None
-    #
-    # Output:
+    # Parameters: None
+    # The friends method is used to build the friends list and has 3 areas; Requests is made up of friend request that the user has
+    # sent out and have not been accepted. Pending is made up of request sent to the user that the user has not yet accepted.
+    # Friends is the list of all users who were sent a request by the current user and have accepted it.
+    # Output: all friend request associated with the current user.
     def friends
+        @requests = []
+        friend_requests = Friend.where('user_receiver_id = ? AND accepted = ?', session[:user_id], false)
+        friend_requests.each do |friend|
+            @requests.push(User.find(friend.user_sender_id))
+        end
+        
+        @pending = []
+        pending_friends = Friend.where('user_sender_id = ? AND accepted = ?', session[:user_id], false)
+        pending_friends.each do |friend|
+            @pending.push(User.find(friend.user_receiver_id))
+        end
+        
+        @friends = Friend.where('user_sender_id=?', session[:user_id]).or(Friend.where('user_receiver_id=?', session[:user_id])).where('accepted=?', true)
+        
         @friends = []
-        #@fiends = Friends.where('(user_sender_id = ? or user_receiver_id = ?) and accepted = true', session[:current_user_id], session[:current_user_id])
+        friend_sender = Friend.where('user_sender_id = ? AND accepted = ?', session[:user_id], true)
+        friend_sender.each do |friend|
+            @friends.push(User.find(friend.user_receiver_id))
+        end
+        friend_receiver = Friend.where('user_receiver_id = ? AND accepted = ?', session[:user_id], true)
+        friend_receiver.each do |friend|
+            @friends.push(User.find(friend.user_sender_id))
+        end
+        
+        #puts Friend.where('user_sender_id=? AND accepted=?', session[:user_id], true)
+        #puts @friends.inspect
+        return
     end
     
     # Method send_friend_request
@@ -33,19 +60,18 @@ class HomeController < ApplicationController
         # Grab an object from params to make life easier
         friend = params[:friend]
         
-        # Ensure the user isn't adding themselves
-        if friend[:sender_email] == friend[:receiver_email]
-            puts "You can't add yourself, silly!"
+        # Grab the two users this friend request is referring to
+        @user_sender = User.find(session[:user_id])
+        @user_receiver = User.where("email = '#{friend[:receiver_email]}'").first
+        
+        if @user_sender == nil or @user_receiver == nil
+            puts "One of these people don't exist!"
             return
         end
         
-        # Grab the two users this friend request is referring to
-        @user_sender = User.where("email = '#{friend[:sender_email]}'")
-        # @user_sender = User.where("id = '#{session[:current_user_id]}'")
-        @user_receiver = User.where("email = '#{friend[:receiver_email]}'")
-    
-        if @user_sender.size == 0 or @user_receiver.size == 0
-            puts "One of these people don't exist!"
+        # Ensure the user isn't adding themselves
+        if @user_sender[:email] == @user_receiver[:email]
+            puts "You can't add yourself, silly!"
             return
         end
         
@@ -81,42 +107,27 @@ class HomeController < ApplicationController
         )
         
         @friend_request.save
+        
+        redirect_to friends_path
     end
     
     # Method respond_to_friend_request
     # Parameters: params
     # 
     # Output:
-    def respond_to_friend_request(params)
-        puts params.inspect
-        if params[:response]
-            @friend_request = Friend.find(params[:id])
-            puts @friend_request.inspect
-            @friend_request[:accepted] = true
-            puts @friend_request.inspect
-            @friend_request.save
-        else
-            puts params[:id]
-            Friend.delete("where id = ?", params[:id])
-        end
-    end
-    
-    # Method respond_to_friend_request
-    # Parameters: None
-    #
-    # Output:
     def respond_to_friend_request
-        # Grab variable to make it look better
-        friend = params[:friend]
+        puts params.inspect
+        @friend_request = Friend.where('user_sender_id = ? AND user_receiver_id = ?', params[:sender_id], session[:user_id])
         
-        # If the friend request was accepted, update the DB
-        if friend[:accepted]
-            friend.save
-            
-        # Otherwise delete the record
+        if params[:accept]
+            puts "ACCEPTED!"
+            @friend_request[0][:accepted] = true
+            @friend_request[0].save
         else
-            friend.destroy
+            puts "DECLINED!"
+            @friend_request[0].destroy
         end
+        redirect_to friends_path
     end
 
 end

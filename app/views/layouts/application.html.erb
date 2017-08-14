@@ -24,7 +24,7 @@
         <% if logged_in? %>
           <ul class="left hide-on-med-and-down">
             <li><%= link_to "Your Events", home_path %></li>
-            <li><a href="#">Friends</a></li>
+            <li><%= link_to "Friends", friends_path %></li>
           </ul>
         <% end %>
         <ul class="right hide-on-med-and-down">
@@ -39,7 +39,7 @@
         <ul class="side-nav" id="nav-mobile">
           <% if logged_in? %>
             <li><%= link_to "Your Events", home_path %></li>
-            <li><a href="#">Friends</a></li>
+            <li><%= link_to "Friends", friends_path %></li>
             <li><%= link_to "Create Event", create_event_path, :class => "waves-effect waves-light btn blue-grey lighten-1" %></li>
             <li><a href="#">Account</a></li>
             <li><%= link_to "Log out", logout_path, method: :delete %></li>

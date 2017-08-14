@@ -1,19 +1,44 @@
-<h2>Incoming Friend Requests</h2>
+<% if @requests != [] %>
+    <ul class="collection with-header">
+        <li class="collection-header"><h4>Incoming Requests</h4></li>
+        <% @requests.each do |friend| %>
+            <li class="collection-item">
+                <div class="row" style="margin-bottom: 0;">
+                    <h5 class="col s9"><%= friend.preferred_name %></h5>
+                    <%= form_for(:friend, :url => {:controller => 'home', :action => 'respond_to_friend_request'}, :html => {:class => 'col s3'}) do |f| %>
+                        <%= hidden_field_tag 'sender_id', friend.id %>
+                        <%= button_tag(type: 'submit', name: 'accept', class: "waves-effect waves-light btn blue-grey lighten-1 left") do %>
+                            <i class="material-icons">done</i>
+                        <% end %>
+                        <%= button_tag(type: 'submit', class: "waves-effect waves-light btn blue-grey lighten-1 right") do %>
+                            <i class="material-icons">do_not_disturb</i>
+                        <% end %>
+                    <% end %>
+                </div>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
 
-<h2>Pending Requests</h2>
+<% if @pending != [] %>
+    <ul class="collection with-header">
+        <li class="collection-header"><h4>Pending Requests</h4></li>
+        <% @pending.each do |friend| %>
+            <li class="collection-item"><%= friend.preferred_name %></li>
+        <% end %>
+    </ul>
+<% end %>
 
-<h2>Friends</h2>
-<%= @friends.each do |friend| %>
-    
+<% if @friends != [] %>
+    <ul class="collection with-header">
+        <li class="collection-header"><h4>Your Friends</h4></li>
+        <% @friends.each do |friend| %>
+            <li class="collection-item"><%= friend.preferred_name %></li>
+        <% end %>
+    </ul>
 <% end %>
 
 <%= form_for(:friend, :url => {:controller => 'home', :action => 'send_friend_request'}, :html => {:class => 'col s12'}) do |f| %>
-    <div class="row">
-        <div class="input-field col s12">
-          <%= f.text_field :sender_email, :class => 'validate' %>
-          <label for="friend_sender_email">Your Email</label>
-        </div>
-    </div>
     <div class="row">
         <div class="input-field col s12">
           <%= f.text_field :receiver_email, :class => 'validate' %>
@@ -21,6 +46,8 @@
         </div>
     </div>
     <div class="row">
-        <%= f.submit 'Add Friend', :class => 'waves-effect waves-light btn col s12' %>
+        <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
+            Add Friend
+        <% end %>
     </div>
 <% end %>
