@@ -15,9 +15,9 @@
                 <%= f.text_field :time, :id => 'event_time', :class => 'validate timepicker' %>
             </div>
             <div class="col s12">
-                 <%= f.submit "Create Event", :class => 'waves-effect waves-light btn col s12 blue-grey lighten-1' %>
-                 <!--<a class="waves-effect waves-light btn" href="/create_event/create_event">Submit</a>-->
-        
+                 <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
+                    Create Event
+                <% end %>
             </div>
         
         <% end %>
