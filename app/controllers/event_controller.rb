@@ -12,7 +12,7 @@ class EventController < ApplicationController
         if @admin
             @accepted = true
         else
-            @accepted = @event.event_invites.select { |invite| invite.user_id == session[:user_id] }[0].status
+            @accepted = @event.event_invites.select { |invite| invite.user_id == session[:user_id] }[0].accepted
         end
         
         puts @event.inspect
@@ -80,7 +80,7 @@ class EventController < ApplicationController
             if @invite_user.id == session[:user_id]
                 return
             else
-                invite = EventInvite.new(:event_id => @event[:id], :user_id => @invite_user[:id], :status => false)
+                invite = EventInvite.new(:event_id => @event[:id], :user_id => @invite_user[:id], :accepted => false)
                 invite.save
             end
         end
