@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>burgermenu.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../README_md.html">README</a>
+  
+    <li><a href="../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../app/assets/javascripts/create_account_coffee.html">create_account.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/create_event_coffee.html">create_event.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/fp_coffee.html">fp.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/home_coffee.html">home.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/sessions_coffee.html">sessions.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/welcome_coffee.html">welcome.coffee</a>
+  
+    <li><a href="../app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/create_account_scss.html">create_account.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/create_event_scss.html">create_event.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/fp_scss.html">fp.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/home_scss.html">home.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/sessions_scss.html">sessions.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/welcome_scss.html">welcome.scss</a>
+  
+    <li><a href="../config_ru.html">config.ru</a>
+  
+    <li><a href="../db/test_sqlite3.html">test.sqlite3</a>
+  
+    <li><a href="../dist/burgermenu_css.html">burgermenu.css</a>
+  
+    <li><a href="../dist/burgermenu_js.html">burgermenu.js</a>
+  
+    <li><a href="../dist/burgermenu_min_css.html">burgermenu.min.css</a>
+  
+    <li><a href="../dist/burgermenu_min_js.html">burgermenu.min.js</a>
+  
+    <li><a href="../dist/maps/burgermenu_css_map.html">burgermenu.css.map</a>
+  
+    <li><a href="../dist/maps/burgermenu_js_min_map.html">burgermenu.js.min.map</a>
+  
+    <li><a href="../dist/maps/default-theme_css_map.html">default-theme.css.map</a>
+  
+    <li><a href="../dist/maps/jquery_burgermenu_min_js_map.html">jquery.burgermenu.min.js.map</a>
+  
+    <li><a href="../dist/themes/default_css.html">default.css</a>
+  
+    <li><a href="../log/development_log.html">development.log</a>
+  
+    <li><a href="../log/test_log.html">test.log</a>
+  
+    <li><a href="../package_json.html">package.json</a>
+  
+    <li><a href="../public/404_html.html">404.html</a>
+  
+    <li><a href="../public/422_html.html">422.html</a>
+  
+    <li><a href="../public/500_html.html">500.html</a>
+  
+    <li><a href="../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../public/robots_txt.html">robots</a>
+  
+    <li><a href="../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../tmp/restart_txt.html">restart</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page dist/burgermenu.js">
+
+<pre>!
+ Burgermenu 0.1.4
+ Simple off canvas menu with hardware accelerated transitions and amazing native behavior.
+
+ https://github.com/vortizhe/burgermenu
+
+ Copyright 2016, Victor Ortiz. Licensed under MIT.
+
+ Released on: February 14, 2016</pre>
+
+<p>;(function ($, window, undefined) {</p>
+
+<pre>var $document = $(window.document),
+    defaults = {
+      position: &quot;left&quot;,
+      toggle_selector: &#39;#burgermenu-toggle&#39;,
+      parent_selector: &#39;.has-children&#39;,
+      children_selector: &#39;.is-children&#39;,
+      dropdown_selector: &#39;.dropdown&#39;,
+      back_selector: &#39;.back&#39;
+    };
+
+// Constructor
+function BurgerMenu(element, options) {
+  this.element = element;
+  this.options = $.extend( {}, defaults, options) ;
+
+  this.init();
+}
+
+BurgerMenu.prototype.init = function() {
+  var $el = $(this.element),
+      $html = $(&#39;html&#39;),
+      opts = this.options;
+
+  $html.find(&#39;body&#39;).append(&#39;&lt;div id=&quot;burgermenu-blocker&quot;/&gt;&#39;);
+  $(opts.toggle_selector).addClass(&#39;burgermenu-toggle&#39;);
+
+  // Bind open/close menu event burgermenu.toggle to element menu
+  $el.bind(&#39;burgermenu.toggle&#39;, function(e) {
+    e.preventDefault();
+    $html.toggleClass(&#39;opened-&#39; + opts.position);
+  });
+
+  $el.find(opts.children_selector).each(function(i, item) {
+    var $item = $(item),
+        child_id = &#39;bm-panel-&#39; + i;
+
+    $item.siblings(&#39;a&#39;).attr(&#39;href&#39;, &#39;#&#39; + child_id);
+    $item.remove();
+
+    $el.append($item);
+    $item.wrap(&quot;&lt;div class=&#39;burgermenu-panel&#39; id=&#39;&quot; + child_id + &quot;&#39;/&gt;&quot;);
+  });
+
+  $el.find(&#39;.active&#39;).closest(&#39;.burgermenu-panel&#39;).addClass(&#39;opened&#39;);
+
+  $document.on(&#39;click touchstart&#39;, &#39;#burgermenu-blocker, &#39; + opts.toggle_selector, function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $el.trigger(&#39;burgermenu.toggle&#39;);
+  });
+
+  // Bind open/close submenu event
+  $el.on(&#39;click&#39;, opts.parent_selector + &#39; &gt; a&#39;, function(e) {
+    e.preventDefault();
+    $($(this).attr(&#39;href&#39;)).toggleClass(&#39;opened&#39;);
+  });
+
+  $el.on(&#39;click&#39;, opts.back_selector, function(e) {
+    e.preventDefault();
+    $(this).closest(&#39;.burgermenu-panel&#39;).toggleClass(&#39;opened&#39;);
+  });
+
+  $el.on(&#39;click&#39;, opts.dropdown_selector + &#39; &gt; a&#39;, function(e) {
+    e.preventDefault();
+    $(this).siblings(&#39;ul&#39;).slideToggle();
+    $(this).closest(&#39;li&#39;).toggleClass(&#39;opened&#39;);
+  });
+};
+
+// A really lightweight plugin wrapper around the constructor,
+// preventing against multiple instantiations
+$.fn.burgermenu = function(options) {
+  return this.each(function () {
+    if (!$.data(this, &#39;plugin_burgermenu&#39;)) {
+      $.data(this, &#39;plugin_burgermenu&#39;, new BurgerMenu(this, options));
+    }
+  });
+};</pre>
+
+<p>}(jQuery, window));</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

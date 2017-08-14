@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>test.log - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../README_md.html">README</a>
+  
+    <li><a href="../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../app/assets/javascripts/create_account_coffee.html">create_account.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/create_event_coffee.html">create_event.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/fp_coffee.html">fp.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/home_coffee.html">home.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/sessions_coffee.html">sessions.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/welcome_coffee.html">welcome.coffee</a>
+  
+    <li><a href="../app/assets/stylesheets/application_scss.html">application.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/create_account_scss.html">create_account.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/create_event_scss.html">create_event.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/fp_scss.html">fp.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/home_scss.html">home.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/sessions_scss.html">sessions.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/welcome_scss.html">welcome.scss</a>
+  
+    <li><a href="../config_ru.html">config.ru</a>
+  
+    <li><a href="../db/test_sqlite3.html">test.sqlite3</a>
+  
+    <li><a href="../dist/burgermenu_css.html">burgermenu.css</a>
+  
+    <li><a href="../dist/burgermenu_js.html">burgermenu.js</a>
+  
+    <li><a href="../dist/burgermenu_min_css.html">burgermenu.min.css</a>
+  
+    <li><a href="../dist/burgermenu_min_js.html">burgermenu.min.js</a>
+  
+    <li><a href="../dist/maps/burgermenu_css_map.html">burgermenu.css.map</a>
+  
+    <li><a href="../dist/maps/burgermenu_js_min_map.html">burgermenu.js.min.map</a>
+  
+    <li><a href="../dist/maps/default-theme_css_map.html">default-theme.css.map</a>
+  
+    <li><a href="../dist/maps/jquery_burgermenu_min_js_map.html">jquery.burgermenu.min.js.map</a>
+  
+    <li><a href="../dist/themes/default_css.html">default.css</a>
+  
+    <li><a href="../log/development_log.html">development.log</a>
+  
+    <li><a href="../log/test_log.html">test.log</a>
+  
+    <li><a href="../package_json.html">package.json</a>
+  
+    <li><a href="../public/404_html.html">404.html</a>
+  
+    <li><a href="../public/422_html.html">422.html</a>
+  
+    <li><a href="../public/500_html.html">500.html</a>
+  
+    <li><a href="../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../public/robots_txt.html">robots</a>
+  
+    <li><a href="../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../tmp/restart_txt.html">restart</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page log/test.log">
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;comments&quot;[0m
+[1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[1m[35m (17.8ms)[0m  [1m[35mCREATE TABLE &quot;comments&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;event_id&quot; integer, &quot;user_id&quot; integer, &quot;comment&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (13.2ms)[0m  [1m[35mCREATE  INDEX &quot;index_comments_on_event_id&quot; ON &quot;comments&quot; (&quot;event_id&quot;)[0m
+[1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+          FROM sqlite_master
+          WHERE name=&#39;index_comments_on_event_id&#39; AND type=&#39;index&#39;
+          UNION ALL
+          SELECT sql
+          FROM sqlite_temp_master
+          WHERE name=&#39;index_comments_on_event_id&#39; AND type=&#39;index&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (22.7ms)[0m  [1m[35mCREATE  INDEX &quot;index_comments_on_user_id&quot; ON &quot;comments&quot; (&quot;user_id&quot;)[0m
+[1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;events&quot;[0m
+[1m[35m (17.8ms)[0m  [1m[35mCREATE TABLE &quot;events&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;user_id&quot; integer, &quot;name&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (16.0ms)[0m  [1m[35mCREATE  INDEX &quot;index_events_on_user_id&quot; ON &quot;events&quot; (&quot;user_id&quot;)[0m
+[1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;friends&quot;[0m
+[1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE &quot;friends&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;user_id&quot; integer, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (14.3ms)[0m  [1m[35mCREATE  INDEX &quot;index_friends_on_user_id&quot; ON &quot;friends&quot; (&quot;user_id&quot;)[0m
+[1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;group_links&quot;[0m
+[1m[35m (21.8ms)[0m  [1m[35mCREATE TABLE &quot;group_links&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;group_id&quot; integer, &quot;user_id&quot; integer, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (19.9ms)[0m  [1m[35mCREATE  INDEX &quot;index_group_links_on_group_id&quot; ON &quot;group_links&quot; (&quot;group_id&quot;)[0m
+[1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+          FROM sqlite_master
+          WHERE name=&#39;index_group_links_on_group_id&#39; AND type=&#39;index&#39;
+          UNION ALL
+          SELECT sql
+          FROM sqlite_temp_master
+          WHERE name=&#39;index_group_links_on_group_id&#39; AND type=&#39;index&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (14.8ms)[0m  [1m[35mCREATE  INDEX &quot;index_group_links_on_user_id&quot; ON &quot;group_links&quot; (&quot;user_id&quot;)[0m
+[1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;groups&quot;[0m
+[1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE &quot;groups&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;user_id&quot; integer, &quot;name&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (17.5ms)[0m  [1m[35mCREATE  INDEX &quot;index_groups_on_user_id&quot; ON &quot;groups&quot; (&quot;user_id&quot;)[0m
+[1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;polls&quot;[0m
+[1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE &quot;polls&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;event_id&quot; integer, &quot;open&quot; boolean, &quot;name&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (14.3ms)[0m  [1m[35mCREATE  INDEX &quot;index_polls_on_event_id&quot; ON &quot;polls&quot; (&quot;event_id&quot;)[0m
+[1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;suggestions&quot;[0m
+[1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE &quot;suggestions&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;poll_id&quot; integer, &quot;user_id&quot; integer, &quot;name&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (12.0ms)[0m  [1m[35mCREATE  INDEX &quot;index_suggestions_on_poll_id&quot; ON &quot;suggestions&quot; (&quot;poll_id&quot;)[0m
+[1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+          FROM sqlite_master
+          WHERE name=&#39;index_suggestions_on_poll_id&#39; AND type=&#39;index&#39;
+          UNION ALL
+          SELECT sql
+          FROM sqlite_temp_master
+          WHERE name=&#39;index_suggestions_on_poll_id&#39; AND type=&#39;index&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (10.5ms)[0m  [1m[35mCREATE  INDEX &quot;index_suggestions_on_user_id&quot; ON &quot;suggestions&quot; (&quot;user_id&quot;)[0m
+[1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;user_to_events&quot;[0m
+[1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE &quot;user_to_events&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;event_id&quot; integer, &quot;user_id&quot; integer, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (13.9ms)[0m  [1m[35mCREATE  INDEX &quot;index_user_to_events_on_event_id&quot; ON &quot;user_to_events&quot; (&quot;event_id&quot;)[0m
+[1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+          FROM sqlite_master
+          WHERE name=&#39;index_user_to_events_on_event_id&#39; AND type=&#39;index&#39;
+          UNION ALL
+          SELECT sql
+          FROM sqlite_temp_master
+          WHERE name=&#39;index_user_to_events_on_event_id&#39; AND type=&#39;index&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (11.2ms)[0m  [1m[35mCREATE  INDEX &quot;index_user_to_events_on_user_id&quot; ON &quot;user_to_events&quot; (&quot;user_id&quot;)[0m
+[1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;users&quot;[0m
+[1m[35m (21.5ms)[0m  [1m[35mCREATE TABLE &quot;users&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;email&quot; varchar, &quot;password&quot; varchar, &quot;preferred_name&quot; varchar, &quot;phone_number&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS &quot;votes&quot;[0m
+[1m[35m (20.0ms)[0m  [1m[35mCREATE TABLE &quot;votes&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;suggestion_id&quot; integer, &quot;user_id&quot; integer, &quot;weight&quot; integer, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (21.0ms)[0m  [1m[35mCREATE  INDEX &quot;index_votes_on_suggestion_id&quot; ON &quot;votes&quot; (&quot;suggestion_id&quot;)[0m
+[1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+          FROM sqlite_master
+          WHERE name=&#39;index_votes_on_suggestion_id&#39; AND type=&#39;index&#39;
+          UNION ALL
+          SELECT sql
+          FROM sqlite_temp_master
+          WHERE name=&#39;index_votes_on_suggestion_id&#39; AND type=&#39;index&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (17.5ms)[0m  [1m[35mCREATE  INDEX &quot;index_votes_on_user_id&quot; ON &quot;votes&quot; (&quot;user_id&quot;)[0m
+[1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; varchar NOT NULL PRIMARY KEY)[0m
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (17.1ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (version) VALUES (20170705225515)[0m
+[1m[35m (15.9ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (version) VALUES</pre>
+
+<p>(20170705223729), (20170705224918), (20170705224639), (20170705222902),
+(20170705225453), (20170705224329), (20170705224300), (20170705224356),
+(20170705224440);</p>
+
+<p>[0m</p>
+
+<pre>[1m[35m (20.0ms)[0m  [1m[35mCREATE TABLE &quot;ar_internal_metadata&quot; (&quot;key&quot; varchar NOT NULL PRIMARY KEY, &quot;value&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;ar_internal_metadata&quot; (&quot;key&quot;, &quot;value&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?)[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;value&quot;, &quot;test&quot;], [&quot;created_at&quot;, &quot;2017-07-31 20:06:39.191424&quot;], [&quot;updated_at&quot;, &quot;2017-07-31 20:06:39.191424&quot;]]
+[1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (1.5ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:06:39.414573&#39;, &#39;2017-07-31 20:06:39.414573&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:06:39.414573&#39;, &#39;2017-07-31 20:06:39.414573&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.418684&#39;, &#39;2017-07-31 20:06:39.418684&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.418684&#39;, &#39;2017-07-31 20:06:39.418684&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.421309&#39;, &#39;2017-07-31 20:06:39.421309&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.421309&#39;, &#39;2017-07-31 20:06:39.421309&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.424384&#39;, &#39;2017-07-31 20:06:39.424384&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.424384&#39;, &#39;2017-07-31 20:06:39.424384&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.427030&#39;, &#39;2017-07-31 20:06:39.427030&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.427030&#39;, &#39;2017-07-31 20:06:39.427030&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.429725&#39;, &#39;2017-07-31 20:06:39.429725&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.429725&#39;, &#39;2017-07-31 20:06:39.429725&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.432703&#39;, &#39;2017-07-31 20:06:39.432703&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.432703&#39;, &#39;2017-07-31 20:06:39.432703&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.435565&#39;, &#39;2017-07-31 20:06:39.435565&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.435565&#39;, &#39;2017-07-31 20:06:39.435565&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:06:39.714306&#39;, &#39;2017-07-31 20:06:39.714306&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:06:39.714306&#39;, &#39;2017-07-31 20:06:39.714306&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.717092&#39;, &#39;2017-07-31 20:06:39.717092&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.717092&#39;, &#39;2017-07-31 20:06:39.717092&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.719109&#39;, &#39;2017-07-31 20:06:39.719109&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.719109&#39;, &#39;2017-07-31 20:06:39.719109&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.721069&#39;, &#39;2017-07-31 20:06:39.721069&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.721069&#39;, &#39;2017-07-31 20:06:39.721069&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.722628&#39;, &#39;2017-07-31 20:06:39.722628&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.722628&#39;, &#39;2017-07-31 20:06:39.722628&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.724131&#39;, &#39;2017-07-31 20:06:39.724131&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.724131&#39;, &#39;2017-07-31 20:06:39.724131&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.725603&#39;, &#39;2017-07-31 20:06:39.725603&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.725603&#39;, &#39;2017-07-31 20:06:39.725603&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.726839&#39;, &#39;2017-07-31 20:06:39.726839&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.726839&#39;, &#39;2017-07-31 20:06:39.726839&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:06:39.736254&#39;, &#39;2017-07-31 20:06:39.736254&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:06:39.736254&#39;, &#39;2017-07-31 20:06:39.736254&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.738353&#39;, &#39;2017-07-31 20:06:39.738353&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.738353&#39;, &#39;2017-07-31 20:06:39.738353&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.739875&#39;, &#39;2017-07-31 20:06:39.739875&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.739875&#39;, &#39;2017-07-31 20:06:39.739875&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.741327&#39;, &#39;2017-07-31 20:06:39.741327&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:06:39.741327&#39;, &#39;2017-07-31 20:06:39.741327&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.743048&#39;, &#39;2017-07-31 20:06:39.743048&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.743048&#39;, &#39;2017-07-31 20:06:39.743048&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.744556&#39;, &#39;2017-07-31 20:06:39.744556&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:06:39.744556&#39;, &#39;2017-07-31 20:06:39.744556&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.745975&#39;, &#39;2017-07-31 20:06:39.745975&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.745975&#39;, &#39;2017-07-31 20:06:39.745975&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.747748&#39;, &#39;2017-07-31 20:06:39.747748&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:06:39.747748&#39;, &#39;2017-07-31 20:06:39.747748&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.5ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:09:05.398143&#39;, &#39;2017-07-31 20:09:05.398143&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:09:05.398143&#39;, &#39;2017-07-31 20:09:05.398143&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.402445&#39;, &#39;2017-07-31 20:09:05.402445&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.402445&#39;, &#39;2017-07-31 20:09:05.402445&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.404935&#39;, &#39;2017-07-31 20:09:05.404935&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.404935&#39;, &#39;2017-07-31 20:09:05.404935&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.407514&#39;, &#39;2017-07-31 20:09:05.407514&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.407514&#39;, &#39;2017-07-31 20:09:05.407514&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.410166&#39;, &#39;2017-07-31 20:09:05.410166&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.410166&#39;, &#39;2017-07-31 20:09:05.410166&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.412719&#39;, &#39;2017-07-31 20:09:05.412719&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.412719&#39;, &#39;2017-07-31 20:09:05.412719&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.415122&#39;, &#39;2017-07-31 20:09:05.415122&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.415122&#39;, &#39;2017-07-31 20:09:05.415122&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.417703&#39;, &#39;2017-07-31 20:09:05.417703&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.417703&#39;, &#39;2017-07-31 20:09:05.417703&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:09:05.430872&#39;, &#39;2017-07-31 20:09:05.430872&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:09:05.430872&#39;, &#39;2017-07-31 20:09:05.430872&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.433180&#39;, &#39;2017-07-31 20:09:05.433180&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.433180&#39;, &#39;2017-07-31 20:09:05.433180&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.434465&#39;, &#39;2017-07-31 20:09:05.434465&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.434465&#39;, &#39;2017-07-31 20:09:05.434465&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.435826&#39;, &#39;2017-07-31 20:09:05.435826&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.435826&#39;, &#39;2017-07-31 20:09:05.435826&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.437294&#39;, &#39;2017-07-31 20:09:05.437294&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.437294&#39;, &#39;2017-07-31 20:09:05.437294&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.438944&#39;, &#39;2017-07-31 20:09:05.438944&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.438944&#39;, &#39;2017-07-31 20:09:05.438944&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.440923&#39;, &#39;2017-07-31 20:09:05.440923&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.440923&#39;, &#39;2017-07-31 20:09:05.440923&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.442629&#39;, &#39;2017-07-31 20:09:05.442629&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.442629&#39;, &#39;2017-07-31 20:09:05.442629&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:09:05.598045&#39;, &#39;2017-07-31 20:09:05.598045&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:09:05.598045&#39;, &#39;2017-07-31 20:09:05.598045&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.600722&#39;, &#39;2017-07-31 20:09:05.600722&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.600722&#39;, &#39;2017-07-31 20:09:05.600722&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.602569&#39;, &#39;2017-07-31 20:09:05.602569&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.602569&#39;, &#39;2017-07-31 20:09:05.602569&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.604694&#39;, &#39;2017-07-31 20:09:05.604694&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:09:05.604694&#39;, &#39;2017-07-31 20:09:05.604694&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.606600&#39;, &#39;2017-07-31 20:09:05.606600&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.606600&#39;, &#39;2017-07-31 20:09:05.606600&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.608529&#39;, &#39;2017-07-31 20:09:05.608529&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:09:05.608529&#39;, &#39;2017-07-31 20:09:05.608529&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.609876&#39;, &#39;2017-07-31 20:09:05.609876&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.609876&#39;, &#39;2017-07-31 20:09:05.609876&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.611471&#39;, &#39;2017-07-31 20:09:05.611471&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:09:05.611471&#39;, &#39;2017-07-31 20:09:05.611471&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:11:14.800788&#39;, &#39;2017-07-31 20:11:14.800788&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:11:14.800788&#39;, &#39;2017-07-31 20:11:14.800788&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.804336&#39;, &#39;2017-07-31 20:11:14.804336&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.804336&#39;, &#39;2017-07-31 20:11:14.804336&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:14.806536&#39;, &#39;2017-07-31 20:11:14.806536&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:14.806536&#39;, &#39;2017-07-31 20:11:14.806536&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.809111&#39;, &#39;2017-07-31 20:11:14.809111&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.809111&#39;, &#39;2017-07-31 20:11:14.809111&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.811515&#39;, &#39;2017-07-31 20:11:14.811515&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.811515&#39;, &#39;2017-07-31 20:11:14.811515&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:14.814060&#39;, &#39;2017-07-31 20:11:14.814060&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:14.814060&#39;, &#39;2017-07-31 20:11:14.814060&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.817047&#39;, &#39;2017-07-31 20:11:14.817047&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.817047&#39;, &#39;2017-07-31 20:11:14.817047&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.819675&#39;, &#39;2017-07-31 20:11:14.819675&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.819675&#39;, &#39;2017-07-31 20:11:14.819675&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:11:14.976064&#39;, &#39;2017-07-31 20:11:14.976064&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:11:14.976064&#39;, &#39;2017-07-31 20:11:14.976064&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.978043&#39;, &#39;2017-07-31 20:11:14.978043&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.978043&#39;, &#39;2017-07-31 20:11:14.978043&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:14.979368&#39;, &#39;2017-07-31 20:11:14.979368&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:14.979368&#39;, &#39;2017-07-31 20:11:14.979368&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.981197&#39;, &#39;2017-07-31 20:11:14.981197&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.981197&#39;, &#39;2017-07-31 20:11:14.981197&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.982680&#39;, &#39;2017-07-31 20:11:14.982680&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.982680&#39;, &#39;2017-07-31 20:11:14.982680&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:14.984042&#39;, &#39;2017-07-31 20:11:14.984042&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:14.984042&#39;, &#39;2017-07-31 20:11:14.984042&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.985454&#39;, &#39;2017-07-31 20:11:14.985454&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.985454&#39;, &#39;2017-07-31 20:11:14.985454&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.986779&#39;, &#39;2017-07-31 20:11:14.986779&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:14.986779&#39;, &#39;2017-07-31 20:11:14.986779&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:11:14.997065&#39;, &#39;2017-07-31 20:11:14.997065&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:11:14.997065&#39;, &#39;2017-07-31 20:11:14.997065&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.998800&#39;, &#39;2017-07-31 20:11:14.998800&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:14.998800&#39;, &#39;2017-07-31 20:11:14.998800&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:15.000281&#39;, &#39;2017-07-31 20:11:15.000281&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:15.000281&#39;, &#39;2017-07-31 20:11:15.000281&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:15.002417&#39;, &#39;2017-07-31 20:11:15.002417&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:15.002417&#39;, &#39;2017-07-31 20:11:15.002417&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.003718&#39;, &#39;2017-07-31 20:11:15.003718&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.003718&#39;, &#39;2017-07-31 20:11:15.003718&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:15.005533&#39;, &#39;2017-07-31 20:11:15.005533&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:15.005533&#39;, &#39;2017-07-31 20:11:15.005533&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.006877&#39;, &#39;2017-07-31 20:11:15.006877&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.006877&#39;, &#39;2017-07-31 20:11:15.006877&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.009000&#39;, &#39;2017-07-31 20:11:15.009000&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.009000&#39;, &#39;2017-07-31 20:11:15.009000&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:11:15.018297&#39;, &#39;2017-07-31 20:11:15.018297&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:11:15.018297&#39;, &#39;2017-07-31 20:11:15.018297&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:15.020584&#39;, &#39;2017-07-31 20:11:15.020584&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:15.020584&#39;, &#39;2017-07-31 20:11:15.020584&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:15.022148&#39;, &#39;2017-07-31 20:11:15.022148&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:15.022148&#39;, &#39;2017-07-31 20:11:15.022148&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:15.023700&#39;, &#39;2017-07-31 20:11:15.023700&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:11:15.023700&#39;, &#39;2017-07-31 20:11:15.023700&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.025147&#39;, &#39;2017-07-31 20:11:15.025147&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.025147&#39;, &#39;2017-07-31 20:11:15.025147&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:15.026807&#39;, &#39;2017-07-31 20:11:15.026807&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:11:15.026807&#39;, &#39;2017-07-31 20:11:15.026807&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.028359&#39;, &#39;2017-07-31 20:11:15.028359&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.028359&#39;, &#39;2017-07-31 20:11:15.028359&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.029686&#39;, &#39;2017-07-31 20:11:15.029686&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:11:15.029686&#39;, &#39;2017-07-31 20:11:15.029686&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.6ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.021573&#39;, &#39;2017-07-31 20:19:28.021573&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.021573&#39;, &#39;2017-07-31 20:19:28.021573&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.027521&#39;, &#39;2017-07-31 20:19:28.027521&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.027521&#39;, &#39;2017-07-31 20:19:28.027521&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.031725&#39;, &#39;2017-07-31 20:19:28.031725&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.031725&#39;, &#39;2017-07-31 20:19:28.031725&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.036005&#39;, &#39;2017-07-31 20:19:28.036005&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.036005&#39;, &#39;2017-07-31 20:19:28.036005&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.039766&#39;, &#39;2017-07-31 20:19:28.039766&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.039766&#39;, &#39;2017-07-31 20:19:28.039766&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.043578&#39;, &#39;2017-07-31 20:19:28.043578&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.043578&#39;, &#39;2017-07-31 20:19:28.043578&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.047739&#39;, &#39;2017-07-31 20:19:28.047739&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.047739&#39;, &#39;2017-07-31 20:19:28.047739&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.051537&#39;, &#39;2017-07-31 20:19:28.051537&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.051537&#39;, &#39;2017-07-31 20:19:28.051537&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.065374&#39;, &#39;2017-07-31 20:19:28.065374&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.065374&#39;, &#39;2017-07-31 20:19:28.065374&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.067256&#39;, &#39;2017-07-31 20:19:28.067256&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.067256&#39;, &#39;2017-07-31 20:19:28.067256&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.069008&#39;, &#39;2017-07-31 20:19:28.069008&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.069008&#39;, &#39;2017-07-31 20:19:28.069008&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.071249&#39;, &#39;2017-07-31 20:19:28.071249&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.071249&#39;, &#39;2017-07-31 20:19:28.071249&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.073496&#39;, &#39;2017-07-31 20:19:28.073496&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.073496&#39;, &#39;2017-07-31 20:19:28.073496&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.075536&#39;, &#39;2017-07-31 20:19:28.075536&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.075536&#39;, &#39;2017-07-31 20:19:28.075536&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.077556&#39;, &#39;2017-07-31 20:19:28.077556&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.077556&#39;, &#39;2017-07-31 20:19:28.077556&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.079501&#39;, &#39;2017-07-31 20:19:28.079501&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.079501&#39;, &#39;2017-07-31 20:19:28.079501&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.092770&#39;, &#39;2017-07-31 20:19:28.092770&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.092770&#39;, &#39;2017-07-31 20:19:28.092770&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.095583&#39;, &#39;2017-07-31 20:19:28.095583&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.095583&#39;, &#39;2017-07-31 20:19:28.095583&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.097647&#39;, &#39;2017-07-31 20:19:28.097647&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.097647&#39;, &#39;2017-07-31 20:19:28.097647&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.099829&#39;, &#39;2017-07-31 20:19:28.099829&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.099829&#39;, &#39;2017-07-31 20:19:28.099829&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.101954&#39;, &#39;2017-07-31 20:19:28.101954&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.101954&#39;, &#39;2017-07-31 20:19:28.101954&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.103947&#39;, &#39;2017-07-31 20:19:28.103947&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.103947&#39;, &#39;2017-07-31 20:19:28.103947&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.106096&#39;, &#39;2017-07-31 20:19:28.106096&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.106096&#39;, &#39;2017-07-31 20:19:28.106096&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.108015&#39;, &#39;2017-07-31 20:19:28.108015&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.108015&#39;, &#39;2017-07-31 20:19:28.108015&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.121322&#39;, &#39;2017-07-31 20:19:28.121322&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.121322&#39;, &#39;2017-07-31 20:19:28.121322&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.123948&#39;, &#39;2017-07-31 20:19:28.123948&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.123948&#39;, &#39;2017-07-31 20:19:28.123948&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.126003&#39;, &#39;2017-07-31 20:19:28.126003&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.126003&#39;, &#39;2017-07-31 20:19:28.126003&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.127763&#39;, &#39;2017-07-31 20:19:28.127763&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.127763&#39;, &#39;2017-07-31 20:19:28.127763&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.129238&#39;, &#39;2017-07-31 20:19:28.129238&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.129238&#39;, &#39;2017-07-31 20:19:28.129238&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.130605&#39;, &#39;2017-07-31 20:19:28.130605&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.130605&#39;, &#39;2017-07-31 20:19:28.130605&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.132100&#39;, &#39;2017-07-31 20:19:28.132100&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.132100&#39;, &#39;2017-07-31 20:19:28.132100&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.133669&#39;, &#39;2017-07-31 20:19:28.133669&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.133669&#39;, &#39;2017-07-31 20:19:28.133669&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;votes&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.327907&#39;, &#39;2017-07-31 20:19:28.327907&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;votes&quot; (&quot;weight&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;suggestion_id&quot;, &quot;user_id&quot;) VALUES (1, &#39;2017-07-31 20:19:28.327907&#39;, &#39;2017-07-31 20:19:28.327907&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;group_links&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.330012&#39;, &#39;2017-07-31 20:19:28.330012&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;group_links&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;group_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.330012&#39;, &#39;2017-07-31 20:19:28.330012&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;polls&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.331276&#39;, &#39;2017-07-31 20:19:28.331276&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;polls&quot; (&quot;open&quot;, &quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;) VALUES (&#39;f&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.331276&#39;, &#39;2017-07-31 20:19:28.331276&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;user_to_events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.332959&#39;, &#39;2017-07-31 20:19:28.332959&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;user_to_events&quot; (&quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;event_id&quot;, &quot;user_id&quot;) VALUES (&#39;2017-07-31 20:19:28.332959&#39;, &#39;2017-07-31 20:19:28.332959&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;events&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.334818&#39;, &#39;2017-07-31 20:19:28.334818&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;events&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.334818&#39;, &#39;2017-07-31 20:19:28.334818&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;users&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.336735&#39;, &#39;2017-07-31 20:19:28.336735&#39;, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;password&quot;, &quot;preferred_name&quot;, &quot;phone_number&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;) VALUES (&#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;MyString&#39;, &#39;2017-07-31 20:19:28.336735&#39;, &#39;2017-07-31 20:19:28.336735&#39;, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;groups&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.338682&#39;, &#39;2017-07-31 20:19:28.338682&#39;, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;groups&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.338682&#39;, &#39;2017-07-31 20:19:28.338682&#39;, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM &quot;suggestions&quot;[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.340532&#39;, &#39;2017-07-31 20:19:28.340532&#39;, 980190962, 980190962, 980190962)[0m
+[1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO &quot;suggestions&quot; (&quot;name&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;id&quot;, &quot;poll_id&quot;, &quot;user_id&quot;) VALUES (&#39;MyString&#39;, &#39;2017-07-31 20:19:28.340532&#39;, &#39;2017-07-31 20:19:28.340532&#39;, 298486374, 298486374, 298486374)[0m
+[1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM &quot;friends&quot;[0m
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-07-31 20:20:11
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-07-31 20:33:36
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-07-31 20:44:38
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-07-31 20:45:07
++0000</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.6ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-07-31 20:48:28
++0000</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.5ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-07-31 21:40:36
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-07-31 22:02:04
++0000</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-07-31 23:45:10
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-08-01 01:11:12
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-08-01 01:35:25
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-08-01 01:35:59
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_number_should_be_a_valid_phone_number</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-08-01 01:40:29
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone_number</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-08-01 01:47:35
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-08-01 01:48:08
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started GET “/create_account/create” for 127.0.0.1 at 2017-08-01 01:50:53
++0000</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started POST “/create_account/create” for 127.0.0.1 at 2017-08-01 01:53:10
++0000 Processing by <a
+href="../CreateAccountController.html#method-i-create">CreateAccountController#create</a>
+as HTML</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT &quot;users&quot;.* FROM &quot;users&quot;[0m
+Rendering create_account/new.html.erb within layouts/application
+Rendered create_account/new.html.erb within layouts/application (24.6ms)</pre>
+
+<p>Completed 200 OK in 5835ms (Views: 5822.5ms | ActiveRecord: 0.8ms)</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started POST “/create_account/create” for 127.0.0.1 at 2017-08-01 01:54:40
++0000 Processing by <a
+href="../CreateAccountController.html#method-i-create">CreateAccountController#create</a>
+as HTML</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT &quot;users&quot;.* FROM &quot;users&quot;[0m
+Rendering create_account/new.html.erb within layouts/application
+Rendered create_account/new.html.erb within layouts/application (9.1ms)</pre>
+
+<p>Completed 200 OK in 305ms (Views: 273.8ms | ActiveRecord: 1.5ms)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started POST “/create_account/create” for 127.0.0.1 at 2017-08-01 23:13:09
++0000 Processing by <a
+href="../CreateAccountController.html#method-i-create">CreateAccountController#create</a>
+as HTML Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>WelcomeControllerTest: test_should_get_index</p>
+<hr>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require password to
+be set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_phone_should_be_a_valid_phone</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_a_valid_email</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;invalid&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_: <a href="../User.html">User</a> should require email to be
+set.</p>
+<hr>
+
+<pre>[1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>UserTest: test_email_should_be_unique</p>
+<hr>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = ? LIMIT ?[0m  [[&quot;email&quot;, &quot;email@domain.com&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m</pre>
+<hr>
+
+<p>CreateAccountControllerTest: test_should_get_create</p>
+<hr>
+
+<p>Started POST “/create_account/create” for 127.0.0.1 at 2017-08-01 23:47:24
++0000 Processing by <a
+href="../CreateAccountController.html#method-i-create">CreateAccountController#create</a>
+as HTML Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m</pre>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
