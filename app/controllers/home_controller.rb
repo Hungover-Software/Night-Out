@@ -4,16 +4,16 @@
 # CSCI-4830-860 SU17
 # Home Page Controller (HomeController)
 # Controls actions for the user's home page.
-# Authors: 
+# Authors: Logan Fitzgibbons, Cameron Mezzell
 
 class HomeController < ApplicationController
     
     # Method index
     # Parameters: None
-    #
-    # Output:
+    # Allows for a list of events associated with the currently logged in user to be generated.
+    # Output: all events associated with the current user
     def index
-        @events = Event.order("DATE(date) asc, TIME(time) asc").left_outer_joins(:event_invites).where("events.user_id = ? OR event_invites.user_id = ?", session[:user_id], session[:user_id])
+        @events = Event.distinct.order("DATE(date) asc, TIME(time) asc").left_outer_joins(:event_invites).where("events.user_id = ? OR event_invites.user_id = ?", session[:user_id], session[:user_id])
     end
     
     # Method friends
@@ -54,8 +54,8 @@ class HomeController < ApplicationController
     
     # Method send_friend_request
     # Parameters: None
-    #
-    # Output:
+    # Method called when the user submits the new friend request form
+    # Output: new friend record in friends table
     def send_friend_request
         # Grab an object from params to make life easier
         friend = params[:friend]
@@ -113,8 +113,8 @@ class HomeController < ApplicationController
     
     # Method respond_to_friend_request
     # Parameters: params
-    # 
-    # Output:
+    # Allows for a user to respond to a pending friend request
+    # Output: updates or deletes friend record
     def respond_to_friend_request
         puts params.inspect
         @friend_request = Friend.where('user_sender_id = ? AND user_receiver_id = ?', params[:sender_id], session[:user_id])

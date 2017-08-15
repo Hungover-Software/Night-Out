@@ -24,6 +24,11 @@ Rails.application.routes.draw do
   post 'events/:id/invite', to: 'event#invite'
   post 'events/:id/accept_invite', to: 'event#accept_invite'
   post 'events/:id/decline_invite', to: 'event#decline_invite'
+  post 'events/:id/add_poll', to: 'event#add_poll'
+  post 'events/:id/add_option', to: 'event#add_option'
+  post 'events/:id/vote', to: 'event#vote'
+  post 'events/:id/destroy', to: 'event#destroy'
+  post 'events/:id/remove_poll', to: 'event#remove_poll'
   
   #get 'welcome/index'
   root 'sessions#new'

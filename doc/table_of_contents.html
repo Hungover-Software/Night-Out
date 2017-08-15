@@ -56,6 +56,9 @@
     <a href="app/assets/javascripts/create_event_coffee.html">create_event.coffee</a>
   </li>
     <li class="file">
+    <a href="app/assets/javascripts/event_coffee.html">event.coffee</a>
+  </li>
+    <li class="file">
     <a href="app/assets/javascripts/fp_coffee.html">fp.coffee</a>
   </li>
     <li class="file">
@@ -75,6 +78,9 @@
   </li>
     <li class="file">
     <a href="app/assets/stylesheets/create_event_scss.html">create_event.scss</a>
+  </li>
+    <li class="file">
+    <a href="app/assets/stylesheets/event_scss.html">event.scss</a>
   </li>
     <li class="file">
     <a href="app/assets/stylesheets/fp_scss.html">fp.scss</a>
@@ -123,9 +129,6 @@
   </li>
     <li class="file">
     <a href="log/development_log.html">development.log</a>
-  </li>
-    <li class="file">
-    <a href="log/test_log.html">test.log</a>
   </li>
     <li class="file">
     <a href="package_json.html">package.json</a>
@@ -220,13 +223,7 @@
     <a href="CreateComments.html">CreateComments</a>
   </li>
   <li class="class">
-    <a href="CreateEventController.html">CreateEventController</a>
-  </li>
-  <li class="class">
     <a href="CreateEventControllerTest.html">CreateEventControllerTest</a>
-  </li>
-  <li class="module">
-    <a href="CreateEventHelper.html">CreateEventHelper</a>
   </li>
   <li class="class">
     <a href="CreateEventInvites.html">CreateEventInvites</a>
@@ -259,6 +256,15 @@
     <a href="Event.html">Event</a>
   </li>
   <li class="class">
+    <a href="EventController.html">EventController</a>
+  </li>
+  <li class="class">
+    <a href="EventControllerTest.html">EventControllerTest</a>
+  </li>
+  <li class="module">
+    <a href="EventHelper.html">EventHelper</a>
+  </li>
+  <li class="class">
     <a href="EventInvite.html">EventInvite</a>
   </li>
   <li class="class">
@@ -284,6 +290,9 @@
   </li>
   <li class="class">
     <a href="FriendTest.html">FriendTest</a>
+  </li>
+  <li class="class">
+    <a href="FriendsForeignKey.html">FriendsForeignKey</a>
   </li>
   <li class="class">
     <a href="Group.html">Group</a>
@@ -349,18 +358,27 @@
     <a href="VoteTest.html">VoteTest</a>
   </li>
   <li class="class">
-    <a href="WelcomeController.html">WelcomeController</a>
-  </li>
-  <li class="class">
     <a href="WelcomeControllerTest.html">WelcomeControllerTest</a>
-  </li>
-  <li class="module">
-    <a href="WelcomeHelper.html">WelcomeHelper</a>
   </li>
 </ul>
 
 <h2 id="methods">Methods</h2>
 <ul>
+
+  <li class="method">
+    <a href="EventController.html#method-i-accept_invite">#accept_invite</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-add_option">#add_option</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-add_poll">#add_poll</a>
+    &mdash;
+    <span class="container">EventController</span>
 
   <li class="method">
     <a href="ApplicationController.html#method-i-authenticate_user">#authenticate_user</a>
@@ -413,9 +431,29 @@
     <span class="container">CreateEvents</span>
 
   <li class="method">
+    <a href="FriendsForeignKey.html#method-i-change">#change</a>
+    &mdash;
+    <span class="container">FriendsForeignKey</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-comment">#comment</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-comment_params">#comment_params</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
     <a href="CreateAccountController.html#method-i-create">#create</a>
     &mdash;
     <span class="container">CreateAccountController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-create">#create</a>
+    &mdash;
+    <span class="container">EventController</span>
 
   <li class="method">
     <a href="SessionsController.html#method-i-create">#create</a>
@@ -423,24 +461,29 @@
     <span class="container">SessionsController</span>
 
   <li class="method">
-    <a href="WelcomeController.html#method-i-create">#create</a>
-    &mdash;
-    <span class="container">WelcomeController</span>
-
-  <li class="method">
-    <a href="CreateEventController.html#method-i-create_event">#create_event</a>
-    &mdash;
-    <span class="container">CreateEventController</span>
-
-  <li class="method">
     <a href="SessionsHelper.html#method-i-current_user">#current_user</a>
     &mdash;
     <span class="container">SessionsHelper</span>
 
   <li class="method">
+    <a href="EventController.html#method-i-decline_invite">#decline_invite</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-destroy">#destroy</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
     <a href="SessionsController.html#method-i-destroy">#destroy</a>
     &mdash;
     <span class="container">SessionsController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-event_params">#event_params</a>
+    &mdash;
+    <span class="container">EventController</span>
 
   <li class="method">
     <a href="FpController.html#method-i-forgot_password">#forgot_password</a>
@@ -453,19 +496,19 @@
     <span class="container">HomeController</span>
 
   <li class="method">
-    <a href="SessionsController.html#method-i-home">#home</a>
-    &mdash;
-    <span class="container">SessionsController</span>
-
-  <li class="method">
     <a href="HomeController.html#method-i-index">#index</a>
     &mdash;
     <span class="container">HomeController</span>
 
   <li class="method">
-    <a href="WelcomeController.html#method-i-index">#index</a>
+    <a href="EventController.html#method-i-invite">#invite</a>
     &mdash;
-    <span class="container">WelcomeController</span>
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-invite_params">#invite_params</a>
+    &mdash;
+    <span class="container">EventController</span>
 
   <li class="method">
     <a href="CreateAccountController.html#method-i-list">#list</a>
@@ -488,34 +531,14 @@
     <span class="container">SessionsHelper</span>
 
   <li class="method">
-    <a href="SessionsController.html#method-i-login">#login</a>
-    &mdash;
-    <span class="container">SessionsController</span>
-
-  <li class="method">
-    <a href="SessionsController.html#method-i-login_attempt">#login_attempt</a>
-    &mdash;
-    <span class="container">SessionsController</span>
-
-  <li class="method">
-    <a href="WelcomeController.html#method-i-login_attempt">#login_attempt</a>
-    &mdash;
-    <span class="container">WelcomeController</span>
-
-  <li class="method">
-    <a href="SessionsController.html#method-i-logout">#logout</a>
-    &mdash;
-    <span class="container">SessionsController</span>
-
-  <li class="method">
-    <a href="WelcomeController.html#method-i-logout">#logout</a>
-    &mdash;
-    <span class="container">WelcomeController</span>
-
-  <li class="method">
     <a href="CreateAccountController.html#method-i-new">#new</a>
     &mdash;
     <span class="container">CreateAccountController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-new">#new</a>
+    &mdash;
+    <span class="container">EventController</span>
 
   <li class="method">
     <a href="SessionsController.html#method-i-new">#new</a>
@@ -523,9 +546,29 @@
     <span class="container">SessionsController</span>
 
   <li class="method">
-    <a href="SessionsController.html#method-i-profile">#profile</a>
+    <a href="EventController.html#method-i-option_params">#option_params</a>
     &mdash;
-    <span class="container">SessionsController</span>
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-poll_params">#poll_params</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-remove_option">#remove_option</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-remove_poll">#remove_poll</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-remove_poll_params">#remove_poll_params</a>
+    &mdash;
+    <span class="container">EventController</span>
 
   <li class="method">
     <a href="HomeController.html#method-i-respond_to_friend_request">#respond_to_friend_request</a>
@@ -543,14 +586,14 @@
     <span class="container">HomeController</span>
 
   <li class="method">
-    <a href="SessionsController.html#method-i-setting">#setting</a>
-    &mdash;
-    <span class="container">SessionsController</span>
-
-  <li class="method">
     <a href="UserTest.html#method-i-setup">#setup</a>
     &mdash;
     <span class="container">UserTest</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-show">#show</a>
+    &mdash;
+    <span class="container">EventController</span>
 
   <li class="method">
     <a href="Object.html#method-i-system-21">#system!</a>
@@ -571,13 +614,23 @@
     <a href="PhoneValidator.html#method-i-validate_each">#validate_each</a>
     &mdash;
     <span class="container">PhoneValidator</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-vote">#vote</a>
+    &mdash;
+    <span class="container">EventController</span>
+
+  <li class="method">
+    <a href="EventController.html#method-i-vote_params">#vote_params</a>
+    &mdash;
+    <span class="container">EventController</span>
 </ul>
 </main>
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

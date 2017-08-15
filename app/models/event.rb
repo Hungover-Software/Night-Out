@@ -1,10 +1,18 @@
-# Night Out event planning application
-# Hungover Software
-# University of Nebraska Omaha
-# CSCI-4830-860 SU17
-# Class: Event Model (Event)
-#
-# Authors:
+=begin
+Night Out event planning application
+
+Hungover Software
+
+University of Nebraska Omaha
+
+CSCI-4830-860 SU17
+
+Class: Event Model (Event)
+
+An Event is an entire Night Out that a group of people plan to have. Keeps track of the date, time, name of the event, and the name of the owner.
+
+Authors: Cal Mezzell
+=end
 
 class Event < ApplicationRecord
   belongs_to :user

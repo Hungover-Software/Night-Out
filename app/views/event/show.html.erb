@@ -1,25 +1,136 @@
+<!--
+# Night Out event planning application
+# Hungover Software
+# University of Nebraska Omaha
+# CSCI-4830-860 SU17
+# Event view (event.show.html.erb)
+# 
+# Authors: 
+!-->
+
 <h1><%= @event.name %></h1>
 
-<% if not @admin and not @accepted %>
-    <%= form_for(:event_invite, :url => {:controller => 'event', :action => 'accept_invite'}, :html => {:class => 'col s12'}) do |f| %>
+<% if not @admin_privileges and not @accepted %>
+    <div class="row">
+        <%= form_for(:event_invite, :url => {:controller => 'event', :action => 'accept_invite'}, :html => {:class => 'row col s6 m4'}) do |f| %>
+            <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s10 blue-grey lighten-1") do %>
+                Accept Invite
+            <% end %>
+        <% end %>
+        <%= form_for(:event_invite, :url => {:controller => 'event', :action => 'decline_invite'}, :html => {:class => 'row col s6 m4'}) do |f| %>
+            <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s10 blue-grey lighten-1") do %>
+                Decline Invite
+            <% end %>
+        <% end %>
+    </div>
+<% end %>
+
+<div class="row">
+    <div class="col s12 m7">
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Currently Invited</h4></li>
+            <li class="collection-item row">
+                <div class="col s8">
+                    <h5><%= @admin.preferred_name %></h5>
+                    <h6><%= @admin.email %></h6>
+                </div>
+                <div class="col s4">
+                    Event Creator
+                </div>
+            </li>
+            <% @invited.each do |invite| %>
+                <li class="collection-item row">
+                    <div class="col s8">
+                        <h5><%= invite[:user].preferred_name %></h5>
+                        <h6><%= invite[:user].email %></h6>
+                    </div>
+                    <div class="col s4">
+                        <% if invite[:accepted] %>
+                            Accepted
+                        <% else %>
+                            No Response
+                        <% end %>
+                    </div>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+    <%= form_for(:event_invite, :url => {:controller => 'event', :action => 'invite'}, :html => {:class => 'row col s12 m5'}) do |f| %>
+        <h5>Invite someone to your Night Out!</h5>
+        <div class="input-field col s12">
+            <%= f.email_field :email, :class => 'validate' %>
+            <label data-error="Invalid Email">Email</label>
+        </div>
         <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
-            Accept Invite
+            Send Invite!
         <% end %>
     <% end %>
-    <%= form_for(:event_invite, :url => {:controller => 'event', :action => 'decline_invite'}, :html => {:class => 'col s12'}) do |f| %>
+</div>
+
+
+<%= form_for(:poll, :url => {:controller => 'event', :action => 'add_poll'}, :html => {:class => 'row'}) do |f| %>
+    <h4>Create a new poll!</h4>
+    <div class="input-field col s12">
+        <%= f.text_field :name, :class => 'validate' %>
+        <label>Poll Name</label>
+    </div>
+    <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
+        Add Poll!
+    <% end %>
+<% end %>
+
+<br />
+
+<h4>Current Polls</h4>
+<% @event.polls.each do |poll| %>
+    <h5>
+        <%= form_for(:remove_poll, :url => {:controller => 'event', :action => 'remove_poll'}, :html => {:class => 'col s12'}) do |f| %>
+            <%= poll.name %>
+            <%= hidden_field_tag 'poll_id', poll.id %>
+            <%= button_tag(type: 'submit', class: "waves-effect waves-light btn red darken-1") do %>
+                <i class="material-icons">do_not_disturb</i>
+            <% end %>
+        <% end %>
+    </h5>
+    <ul>
+        <% poll.options.each do |option| %>
+            <li>
+                <% option.votes.each do |vote| %>
+                    <% if vote.user_id == session[:user_id] %>
+                        *
+                    <% end %>
+                <% end %>
+                <%= option.name %> - <%= option.votes.length %>
+                
+                <%= form_for(:vote, :url => {:controller => 'event', :action => 'vote'}, :html => {:class => 'col s12'}) do |f| %>
+                    <%= f.hidden_field :option_id, :value => option.id %>
+                    <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
+                        Vote for this!
+                    <% end %>
+                <% end %>
+            </li>
+        <% end %>
+    </ul>
+    <%= form_for(:option, :url => {:controller => 'event', :action => 'add_option'}, :html => {:class => 'col s12'}) do |f| %>
+        <div class="input-field col s12">
+            <%= f.text_field :name, :class => 'validate' %>
+            <label>Option</label>
+        </div>
+        <%= f.hidden_field :poll_id, :value => poll.id %>
         <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
-            Decline Invite
+            Add Option
         <% end %>
     <% end %>
 <% end %>
 
-<h4>Invite someone to your Night Out!</h4><br />
-<%= form_for(:event_invite, :url => {:controller => 'event', :action => 'invite'}, :html => {:class => 'col s12'}) do |f| %>
-    <div class="input-field col s12">
-        <%= f.email_field :email, :class => 'validate' %>
-        <label data-error="Invalid Email">Email</label>
-    </div>
-    <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 blue-grey lighten-1") do %>
-        Send Invite!
+<br />
+
+<% if @admin_privileges %>
+    <%= form_for(:event_invite, :url => {:controller => 'event', :action => 'destroy'}, :html => {:class => 'row'}) do |f| %>
+        <%= button_tag(type: 'submit', class: "waves-effect waves-light btn col s12 red darken-1") do %>
+            Delete Event
+        <% end %>
     <% end %>
 <% end %>
+
+<br />

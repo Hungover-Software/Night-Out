@@ -3,7 +3,7 @@
 # University of Nebraska Omaha
 # CSCI-4830-860 SU17
 # Comment Model (Comment)
-#
+# Currently unused.
 # Authors: 
 
 class Comment < ApplicationRecord

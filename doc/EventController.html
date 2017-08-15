@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class EventController - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-accept_invite">#accept_invite</a>
+    
+    <li ><a href="#method-i-add_option">#add_option</a>
+    
+    <li ><a href="#method-i-add_poll">#add_poll</a>
+    
+    <li ><a href="#method-i-comment">#comment</a>
+    
+    <li ><a href="#method-i-comment_params">#comment_params</a>
+    
+    <li ><a href="#method-i-create">#create</a>
+    
+    <li ><a href="#method-i-decline_invite">#decline_invite</a>
+    
+    <li ><a href="#method-i-destroy">#destroy</a>
+    
+    <li ><a href="#method-i-event_params">#event_params</a>
+    
+    <li ><a href="#method-i-invite">#invite</a>
+    
+    <li ><a href="#method-i-invite_params">#invite_params</a>
+    
+    <li ><a href="#method-i-new">#new</a>
+    
+    <li ><a href="#method-i-option_params">#option_params</a>
+    
+    <li ><a href="#method-i-poll_params">#poll_params</a>
+    
+    <li ><a href="#method-i-remove_option">#remove_option</a>
+    
+    <li ><a href="#method-i-remove_poll">#remove_poll</a>
+    
+    <li ><a href="#method-i-remove_poll_params">#remove_poll_params</a>
+    
+    <li ><a href="#method-i-show">#show</a>
+    
+    <li ><a href="#method-i-vote">#vote</a>
+    
+    <li ><a href="#method-i-vote_params">#vote_params</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-EventController">
+  <h1 id="class-EventController" class="class">
+    class EventController
+  </h1>
+
+  <section class="description">
+    
+<p>Night Out event planning application Hungover Software University of
+Nebraska Omaha CSCI-4830-860 SU17 Class: <a href="Event.html">Event</a>
+Creation Controller (EventController) Controls action of the event creation
+page - event/new.html.erb Include: None Authors: Cameron Mezzell, Logan
+Fitzgibbons</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-accept_invite" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">accept_invite</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a
+href="EventController.html#method-i-accept_invite">#accept_invite</a>
+Parameters: None Changes the user&#39;s invite status to &#39;accepted&#39;
+Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="accept_invite-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">accept_invite</span>
+    <span class="ruby-ivar">@invite</span> = <span class="ruby-constant">EventInvite</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:event_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:user_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])[<span class="ruby-value">0</span>]
+    <span class="ruby-ivar">@invite</span>.<span class="ruby-identifier">accepted</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-ivar">@invite</span>.<span class="ruby-identifier">save</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add_option" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_option</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a href="EventController.html#method-i-add_option">#add_option</a>
+Parameters: None Make a new option for a particular poll for users to vote
+on. Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add_option-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_option</span>
+    <span class="ruby-identifier">option</span> = <span class="ruby-constant">Option</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">option_params</span>)
+    <span class="ruby-identifier">option</span>.<span class="ruby-identifier">save</span>
+    
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">inspect</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add_poll" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_poll</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a href="EventController.html#method-i-add_poll">#add_poll</a>
+Parameters: None Create a new poll for a new stop. No initial options.
+Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add_poll-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_poll</span>
+    <span class="ruby-identifier">poll</span> = <span class="ruby-constant">Poll</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">poll_params</span>)
+    <span class="ruby-identifier">poll</span>.<span class="ruby-identifier">save</span>
+    
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">poll</span>.<span class="ruby-identifier">inspect</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">inspect</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-comment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">comment</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method comment Parameters: None Unimplemented Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="comment-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">comment</span>
+    <span class="ruby-identifier">comment</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">comment_params</span>)
+    <span class="ruby-identifier">comment</span>.<span class="ruby-identifier">save</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-comment_params" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">comment_params</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a
+href="EventController.html#method-i-comment_params">#comment_params</a>
+Parameters: None Ensures all required parameters are given. Output: Hash
+containing all the params to create a new comment object</p>
+          
+          
+
+          
+          <div class="method-source-code" id="comment_params-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">comment_params</span>
+    <span class="ruby-identifier">confirmed_params</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:user</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:comment</span>)
+    <span class="ruby-identifier">confirmed_params</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+    <span class="ruby-identifier">confirmed_params</span>[<span class="ruby-value">:timestamp</span>] = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>
+    <span class="ruby-identifier">confirmed_params</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-identifier">confirmed_params</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method create Parameters: None Create a new empty event and places it in
+the database. No polls, no comments, no invites. Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">event_params</span>)
+    <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+    <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">save</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-decline_invite" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">decline_invite</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a
+href="EventController.html#method-i-decline_invite">#decline_invite</a>
+Parameters: None Removes the <a href="EventInvite.html">EventInvite</a>
+object from the database and returns the user to the home page. Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="decline_invite-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">decline_invite</span>
+    <span class="ruby-constant">EventInvite</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:event_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:user_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])[<span class="ruby-value">0</span>].<span class="ruby-identifier">destroy</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">home_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method destroy Parameters: None Completely destroy the given event. All
+associated polls, comments, invites, options, and votes are also destroyed.
+Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+    <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]).<span class="ruby-identifier">destroy</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">home_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-event_params" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">event_params</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a
+href="EventController.html#method-i-event_params">#event_params</a>
+Parameters: None Ensures all required parameters are given. Output: Hash
+containing all the params to create a new <a href="Event.html">Event</a>
+object</p>
+          
+          
+
+          
+          <div class="method-source-code" id="event_params-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">event_params</span>
+    <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:user</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:date</span>, <span class="ruby-value">:time</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-invite" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">invite</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method invite Parameters: None Given an email, send an invitation to the
+user with that email to this event. Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="invite-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">invite</span>
+    <span class="ruby-ivar">@invite_user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">invite_params</span>()[<span class="ruby-value">:email</span>])[<span class="ruby-value">0</span>]
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@invite_user</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@invite_user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+            <span class="ruby-keyword">return</span>
+        <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">invite</span> = <span class="ruby-constant">EventInvite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:event_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:user_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@invite_user</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:accepted</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>)
+            <span class="ruby-identifier">invite</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-invite_params" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">invite_params</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a
+href="EventController.html#method-i-invite_params">#invite_params</a>
+Parameters: None Ensures all required parameters are given. Output: Hash
+containing all the params to create a new <a
+href="EventInvite.html">EventInvite</a> object</p>
+          
+          
+
+          
+          <div class="method-source-code" id="invite_params-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">invite_params</span>
+    <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:event_invite</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:email</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method new Parameters: None Establishes new empty event. No polls, no
+comments, no invites. Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-option_params" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">option_params</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a
+href="EventController.html#method-i-option_params">#option_params</a>
+Parameters: None Ensures all required parameters are given. Output: Hash
+containing all the params to create a new <a href="Option.html">Option</a>
+object</p>
+          
+          
+
+          
+          <div class="method-source-code" id="option_params-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">option_params</span>
+    <span class="ruby-identifier">confirmed_params</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:option</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:poll_id</span>)
+    <span class="ruby-identifier">confirmed_params</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+    <span class="ruby-identifier">confirmed_params</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-poll_params" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">poll_params</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a href="EventController.html#method-i-poll_params">#poll_params</a>
+Parameters: None Ensures all required parameters are given. Output: Hash
+containing all the params to create a new <a href="Poll.html">Poll</a>
+object</p>
+          
+          
+
+          
+          <div class="method-source-code" id="poll_params-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">poll_params</span>
+    <span class="ruby-identifier">confirmed_params</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:poll</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:name</span>)
+    <span class="ruby-identifier">confirmed_params</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+    <span class="ruby-identifier">confirmed_params</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-remove_option" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_option</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a
+href="EventController.html#method-i-remove_option">#remove_option</a>
+Parameters: Unimplemented Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="remove_option-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_option</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-remove_poll" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_poll</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a href="EventController.html#method-i-remove_poll">#remove_poll</a>
+Parameters: None Unimplemented Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="remove_poll-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_poll</span>
+    <span class="ruby-constant">Poll</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">remove_poll_params</span>()[<span class="ruby-value">:poll_id</span>]).<span class="ruby-identifier">destroy</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-remove_poll_params" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_poll_params</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a
+href="EventController.html#method-i-remove_poll_params">#remove_poll_params</a>
+Parameters: None Ensures all required parameters are given. Output: Hash
+containing all the params to create a new <a href="Poll.html">Poll</a>
+object</p>
+          
+          
+
+          
+          <div class="method-source-code" id="remove_poll_params-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 242</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_poll_params</span>
+    <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:remove_poll</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:poll_id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method show Parameters: None Set up and grab necessary variables or objects
+to display all the event information. Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:event_invites</span>, <span class="ruby-value">:polls</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:options</span>]).<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">inspect</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">event_invites</span>.<span class="ruby-identifier">inspect</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">polls</span>.<span class="ruby-identifier">inspect</span>
+    
+    <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@event</span>.<span class="ruby-identifier">user_id</span>)
+    
+    <span class="ruby-ivar">@invited</span> = []
+    <span class="ruby-identifier">event_invites</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">event_invites</span>
+    <span class="ruby-identifier">event_invites</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">invite</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@invited</span>.<span class="ruby-identifier">push</span>({<span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">invite</span>.<span class="ruby-identifier">user_id</span>), <span class="ruby-identifier">accepted</span><span class="ruby-operator">:</span> <span class="ruby-identifier">invite</span>.<span class="ruby-identifier">accepted</span>})
+    <span class="ruby-keyword">end</span>
+    
+    
+    <span class="ruby-ivar">@admin_privileges</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@admin_privileges</span>
+        <span class="ruby-ivar">@accepted</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-ivar">@accepted</span> = <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">event_invites</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">invite</span><span class="ruby-operator">|</span> <span class="ruby-identifier">invite</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] }[<span class="ruby-value">0</span>].<span class="ruby-identifier">accepted</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-vote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">vote</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method vote Parameters: None Saves the user&#39;s vote. If the user already
+voted, it moves their vote to the new option. Output:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="vote-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vote</span>
+    <span class="ruby-identifier">new_vote</span> = <span class="ruby-constant">Vote</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">vote_params</span>)
+    
+    <span class="ruby-identifier">poll</span> = <span class="ruby-constant">Poll</span>.<span class="ruby-identifier">find</span>(<span class="ruby-constant">Option</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">new_vote</span>.<span class="ruby-identifier">option_id</span>).<span class="ruby-identifier">poll_id</span>)
+    
+    <span class="ruby-identifier">already_voted</span> = <span class="ruby-keyword">false</span>
+    
+    <span class="ruby-identifier">poll</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">option</span><span class="ruby-operator">|</span>
+       <span class="ruby-identifier">option</span>.<span class="ruby-identifier">votes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">vote</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">vote</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+              <span class="ruby-identifier">vote</span>.<span class="ruby-identifier">option_id</span> = <span class="ruby-identifier">new_vote</span>.<span class="ruby-identifier">option_id</span>
+              <span class="ruby-identifier">vote</span>.<span class="ruby-identifier">save</span>
+              <span class="ruby-identifier">already_voted</span> = <span class="ruby-keyword">true</span>
+              <span class="ruby-keyword">break</span>
+          <span class="ruby-keyword">end</span>
+       <span class="ruby-keyword">end</span>
+       <span class="ruby-keyword">if</span> <span class="ruby-identifier">already_voted</span>
+           <span class="ruby-keyword">break</span>
+       <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">already_voted</span>
+        <span class="ruby-identifier">new_vote</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-vote_params" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">vote_params</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method <a href="EventController.html#method-i-vote_params">#vote_params</a>
+Parameters: None Ensures all required parameters are given. Output: Hash
+containing all of the params to create a new <a href="Vote.html">Vote</a>
+object</p>
+          
+          
+
+          
+          <div class="method-source-code" id="vote_params-source">
+            <pre><span class="ruby-comment"># File app/controllers/event_controller.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vote_params</span>
+    <span class="ruby-identifier">confirmed_params</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:vote</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:option_id</span>)
+    <span class="ruby-identifier">confirmed_params</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+    <span class="ruby-identifier">confirmed_params</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

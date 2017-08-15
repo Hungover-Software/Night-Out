@@ -6,7 +6,7 @@
 # Controls the actions for the createaccount/new.html.erb page
 # createaccount/new.html.erb is used to signup for a new account with the Night Out app.
 # Include: SessionsHelper
-# Authors: Nathan Lyon,
+# Authors: Nathan Lyon, Logan Fitzgibbons
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception

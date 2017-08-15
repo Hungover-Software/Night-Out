@@ -4,7 +4,7 @@
 # CSCI-4830-860 SU17
 # Forgot Password Controller (FpController)
 #
-# Authors: 
+# Authors: Saujanya Mani, Anup Thapa
 
 class FpController < ApplicationController
   

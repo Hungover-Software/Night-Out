@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>class EventTest - RDoc Documentation</title>
+<title>class FriendsForeignKey - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
@@ -58,19 +58,29 @@
   <h3>Parent</h3>
 
   
-  <p class="link"><a href="ActiveSupport/TestCase.html">ActiveSupport::TestCase</a>
+  <p class="link">ActiveRecord::Migration[5.1]
   
 </div>
 
     
     
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
     
+    <li ><a href="#method-i-change">#change</a>
+    
+  </ul>
+</div>
+
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-EventTest">
-  <h1 id="class-EventTest" class="class">
-    class EventTest
+<main role="main" aria-labelledby="class-FriendsForeignKey">
+  <h1 id="class-FriendsForeignKey" class="class">
+    class FriendsForeignKey
   </h1>
 
   <section class="description">
@@ -90,6 +100,48 @@
     
 
     
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-change" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">change</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="change-source">
+            <pre><span class="ruby-comment"># File db/migrate/20170814190110_friends_foreign_key.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">change</span>
+  <span class="ruby-identifier">add_foreign_key</span> <span class="ruby-value">:friends</span>, <span class="ruby-value">:users</span>, <span class="ruby-identifier">column</span><span class="ruby-operator">:</span> <span class="ruby-value">:user_sender_id</span>
+  <span class="ruby-identifier">add_foreign_key</span> <span class="ruby-value">:friends</span>, <span class="ruby-value">:users</span>, <span class="ruby-identifier">column</span><span class="ruby-operator">:</span> <span class="ruby-value">:user_receiver_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
   </section>
 </main>
 

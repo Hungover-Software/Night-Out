@@ -74,19 +74,7 @@
     
     <li ><a href="#method-i-destroy">#destroy</a>
     
-    <li ><a href="#method-i-home">#home</a>
-    
-    <li ><a href="#method-i-login">#login</a>
-    
-    <li ><a href="#method-i-login_attempt">#login_attempt</a>
-    
-    <li ><a href="#method-i-logout">#logout</a>
-    
     <li ><a href="#method-i-new">#new</a>
-    
-    <li ><a href="#method-i-profile">#profile</a>
-    
-    <li ><a href="#method-i-setting">#setting</a>
     
   </ul>
 </div>
@@ -104,7 +92,7 @@
 <p>Night Out event planning application Hungover Software University of
 Nebraska Omaha CSCI-4830-860 SU17 Sessions Controller (SessionsController)</p>
 
-<p>Authors:</p>
+<p>Authors: Logan Fitzgibbons</p>
 
   </section>
 
@@ -148,7 +136,7 @@ Nebraska Omaha CSCI-4830-860 SU17 Sessions Controller (SessionsController)</p>
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">email</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:session</span>][<span class="ruby-value">:email</span>].<span class="ruby-identifier">downcase</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">authenticate</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:session</span>][<span class="ruby-value">:password</span>])
@@ -190,154 +178,10 @@ Nebraska Omaha CSCI-4830-860 SU17 Sessions Controller (SessionsController)</p>
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 37</span>
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 39</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">log_out</span>
   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_url</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-home" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">home</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="home-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller-old.rb, line 6</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">home</span>
-        <span class="ruby-comment">#Home Page</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-login" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">login</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="login-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller-old.rb, line 18</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">login</span>
-        <span class="ruby-comment">#Login Form</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-login_attempt" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">login_attempt</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="login_attempt-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller-old.rb, line 22</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">login_attempt</span>
-        <span class="ruby-identifier">authorized_user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">authenticate</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:username_or_email</span>],<span class="ruby-identifier">params</span>[<span class="ruby-value">:login_password</span>])
-        <span class="ruby-keyword">if</span> <span class="ruby-identifier">authorized_user</span>
-                <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">authorized_user</span>.<span class="ruby-identifier">id</span>
-                <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;Wow Welcome again, you logged in as #{authorized_user.username}&quot;</span>
-                <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;home&#39;</span>)
-
-
-        <span class="ruby-keyword">else</span>
-                <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Invalid Username or Password&quot;</span>
-        <span class="ruby-identifier">flash</span>[<span class="ruby-value">:color</span>]= <span class="ruby-string">&quot;invalid&quot;</span>
-                <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;login&quot;</span>       
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-logout" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">logout</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="logout-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller-old.rb, line 37</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">logout</span>
-        <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-keyword">nil</span>
-        <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;login&#39;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -368,74 +212,8 @@ Nebraska Omaha CSCI-4830-860 SU17 Sessions Controller (SessionsController)</p>
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-profile" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">profile</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="profile-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller-old.rb, line 10</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">profile</span>
-        <span class="ruby-comment">#Profile Page</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-setting" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">setting</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="setting-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller-old.rb, line 14</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">setting</span>
-        <span class="ruby-comment">#Setting Page</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -455,7 +233,7 @@ Nebraska Omaha CSCI-4830-860 SU17 Sessions Controller (SessionsController)</p>
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

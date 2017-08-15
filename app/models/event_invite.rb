@@ -4,7 +4,7 @@
 # CSCI-4830-860 SU17
 # Class: EventInvite Model (EventInvite)
 #
-# Authors:
+# Authors: Cal Mezzell
 
 class EventInvite < ApplicationRecord
   belongs_to :event

@@ -93,7 +93,8 @@
     
 <p>Night Out event planning application Hungover Software University of
 Nebraska Omaha CSCI-4830-860 SU17 Home Page Controller (HomeController)
-Controls actions for the user&#39;s home page. Authors:</p>
+Controls actions for the user&#39;s home page. Authors: Logan Fitzgibbons,
+Cameron Mezzell</p>
 
   </section>
 
@@ -129,18 +130,46 @@ Controls actions for the user&#39;s home page. Authors:</p>
 
         <div class="method-description">
           
-          <p>Method friends parameters: None</p>
-
-<p>Output:</p>
+          <p>Method friends Parameters: None The friends method is used to build the
+friends list and has 3 areas; Requests is made up of friend request that
+the user has sent out and have not been accepted. Pending is made up of
+request sent to the user that the user has not yet accepted. Friends is the
+list of all users who were sent a request by the current user and have
+accepted it. Output: all friend request associated with the current user.</p>
           
           
 
           
           <div class="method-source-code" id="friends-source">
-            <pre><span class="ruby-comment"># File app/controllers/home_controller.rb, line 24</span>
+            <pre><span class="ruby-comment"># File app/controllers/home_controller.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">friends</span>
+    <span class="ruby-ivar">@requests</span> = []
+    <span class="ruby-identifier">friend_requests</span> = <span class="ruby-constant">Friend</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;user_receiver_id = ? AND accepted = ?&#39;</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-keyword">false</span>)
+    <span class="ruby-identifier">friend_requests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">friend</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@requests</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">friend</span>.<span class="ruby-identifier">user_sender_id</span>))
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-ivar">@pending</span> = []
+    <span class="ruby-identifier">pending_friends</span> = <span class="ruby-constant">Friend</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;user_sender_id = ? AND accepted = ?&#39;</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-keyword">false</span>)
+    <span class="ruby-identifier">pending_friends</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">friend</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@pending</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">friend</span>.<span class="ruby-identifier">user_receiver_id</span>))
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-ivar">@friends</span> = <span class="ruby-constant">Friend</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;user_sender_id=?&#39;</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]).<span class="ruby-identifier">or</span>(<span class="ruby-constant">Friend</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;user_receiver_id=?&#39;</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])).<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;accepted=?&#39;</span>, <span class="ruby-keyword">true</span>)
+    
     <span class="ruby-ivar">@friends</span> = []
-    <span class="ruby-comment">#@fiends = Friends.where(&#39;(user_sender_id = ? or user_receiver_id = ?) and accepted = true&#39;, session[:current_user_id], session[:current_user_id])</span>
+    <span class="ruby-identifier">friend_sender</span> = <span class="ruby-constant">Friend</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;user_sender_id = ? AND accepted = ?&#39;</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-keyword">true</span>)
+    <span class="ruby-identifier">friend_sender</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">friend</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@friends</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">friend</span>.<span class="ruby-identifier">user_receiver_id</span>))
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">friend_receiver</span> = <span class="ruby-constant">Friend</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;user_receiver_id = ? AND accepted = ?&#39;</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-keyword">true</span>)
+    <span class="ruby-identifier">friend_receiver</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">friend</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@friends</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">friend</span>.<span class="ruby-identifier">user_sender_id</span>))
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-comment">#puts Friend.where(&#39;user_sender_id=? AND accepted=?&#39;, session[:user_id], true)</span>
+    <span class="ruby-comment">#puts @friends.inspect</span>
+    <span class="ruby-keyword">return</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -165,9 +194,9 @@ Controls actions for the user&#39;s home page. Authors:</p>
 
         <div class="method-description">
           
-          <p>Method index Parameters: None</p>
-
-<p>Output:</p>
+          <p>Method index Parameters: None Allows for a list of events associated with
+the currently logged in user to be generated. Output: all events associated
+with the current user</p>
           
           
 
@@ -175,8 +204,7 @@ Controls actions for the user&#39;s home page. Authors:</p>
           <div class="method-source-code" id="index-source">
             <pre><span class="ruby-comment"># File app/controllers/home_controller.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
-    <span class="ruby-comment">#@events = Events.where(&quot;user_id = ?&quot;, session[:user_id])</span>
-    <span class="ruby-ivar">@events</span> = []
+    <span class="ruby-ivar">@events</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">distinct</span>.<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;DATE(date) asc, TIME(time) asc&quot;</span>).<span class="ruby-identifier">left_outer_joins</span>(<span class="ruby-value">:event_invites</span>).<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;events.user_id = ? OR event_invites.user_id = ?&quot;</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -192,7 +220,7 @@ Controls actions for the user&#39;s home page. Authors:</p>
         
         <div class="method-heading">
           <span class="method-name">respond_to_friend_request</span><span
-            class="method-args">(params)</span>
+            class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -203,27 +231,27 @@ Controls actions for the user&#39;s home page. Authors:</p>
           
           <p>Method <a
 href="HomeController.html#method-i-respond_to_friend_request">#respond_to_friend_request</a>
-Parameters: params</p>
-
-<p>Output:</p>
+Parameters: params Allows for a user to respond to a pending friend request
+Output: updates or deletes friend record</p>
           
           
 
           
           <div class="method-source-code" id="respond_to_friend_request-source">
-            <pre><span class="ruby-comment"># File app/controllers/home_controller.rb, line 91</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">respond_to_friend_request</span>(<span class="ruby-identifier">params</span>)
+            <pre><span class="ruby-comment"># File app/controllers/home_controller.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">respond_to_friend_request</span>
     <span class="ruby-identifier">puts</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">inspect</span>
-    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:response</span>]
-        <span class="ruby-ivar">@friend_request</span> = <span class="ruby-constant">Friend</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
-        <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@friend_request</span>.<span class="ruby-identifier">inspect</span>
-        <span class="ruby-ivar">@friend_request</span>[<span class="ruby-value">:accepted</span>] = <span class="ruby-keyword">true</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@friend_request</span>.<span class="ruby-identifier">inspect</span>
-        <span class="ruby-ivar">@friend_request</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-ivar">@friend_request</span> = <span class="ruby-constant">Friend</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&#39;user_sender_id = ? AND user_receiver_id = ?&#39;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:sender_id</span>], <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:accept</span>]
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;ACCEPTED!&quot;</span>
+        <span class="ruby-ivar">@friend_request</span>[<span class="ruby-value">0</span>][<span class="ruby-value">:accepted</span>] = <span class="ruby-keyword">true</span>
+        <span class="ruby-ivar">@friend_request</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">save</span>
     <span class="ruby-keyword">else</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
-        <span class="ruby-constant">Friend</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;where id = ?&quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;DECLINED!&quot;</span>
+        <span class="ruby-ivar">@friend_request</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">destroy</span>
     <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">friends_path</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -250,32 +278,30 @@ Parameters: params</p>
           
           <p>Method <a
 href="HomeController.html#method-i-send_friend_request">#send_friend_request</a>
-Parameters: None</p>
-
-<p>Output:</p>
+Parameters: None Method called when the user submits the new friend request
+form Output: new friend record in friends table</p>
           
           
 
           
           <div class="method-source-code" id="send_friend_request-source">
-            <pre><span class="ruby-comment"># File app/controllers/home_controller.rb, line 33</span>
+            <pre><span class="ruby-comment"># File app/controllers/home_controller.rb, line 59</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">send_friend_request</span>
     <span class="ruby-comment"># Grab an object from params to make life easier</span>
     <span class="ruby-identifier">friend</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:friend</span>]
     
-    <span class="ruby-comment"># Ensure the user isn&#39;t adding themselves</span>
-    <span class="ruby-keyword">if</span> <span class="ruby-identifier">friend</span>[<span class="ruby-value">:sender_email</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">friend</span>[<span class="ruby-value">:receiver_email</span>]
-        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;You can&#39;t add yourself, silly!&quot;</span>
+    <span class="ruby-comment"># Grab the two users this friend request is referring to</span>
+    <span class="ruby-ivar">@user_sender</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@user_receiver</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;email = &#39;#{friend[:receiver_email]}&#39;&quot;</span>).<span class="ruby-identifier">first</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_sender</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@user_receiver</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;One of these people don&#39;t exist!&quot;</span>
         <span class="ruby-keyword">return</span>
     <span class="ruby-keyword">end</span>
     
-    <span class="ruby-comment"># Grab the two users this friend request is referring to</span>
-    <span class="ruby-ivar">@user_sender</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;email = &#39;#{friend[:sender_email]}&#39;&quot;</span>)
-    <span class="ruby-comment"># @user_sender = User.where(&quot;id = &#39;#{session[:current_user_id]}&#39;&quot;)</span>
-    <span class="ruby-ivar">@user_receiver</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;email = &#39;#{friend[:receiver_email]}&#39;&quot;</span>)
-
-    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_sender</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@user_receiver</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;One of these people don&#39;t exist!&quot;</span>
+    <span class="ruby-comment"># Ensure the user isn&#39;t adding themselves</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_sender</span>[<span class="ruby-value">:email</span>] <span class="ruby-operator">==</span> <span class="ruby-ivar">@user_receiver</span>[<span class="ruby-value">:email</span>]
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;You can&#39;t add yourself, silly!&quot;</span>
         <span class="ruby-keyword">return</span>
     <span class="ruby-keyword">end</span>
     
@@ -311,6 +337,8 @@ Parameters: None</p>
     )
     
     <span class="ruby-ivar">@friend_request</span>.<span class="ruby-identifier">save</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">friends_path</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -330,7 +358,7 @@ Parameters: None</p>
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 
