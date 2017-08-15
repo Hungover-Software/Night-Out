@@ -13,7 +13,8 @@ class HomeController < ApplicationController
     # Allows for a list of events associated with the currently logged in user to be generated.
     # Output: all events associated with the current user
     def index
-        @events = Event.distinct.order("DATE(events.date) asc, TIME(events.time) asc").left_outer_joins(:event_invites).where("events.user_id = ? OR event_invites.user_id = ?", session[:user_id], session[:user_id])
+        #.order("DATE(events.date) asc, TIME(events.time) asc")
+        @events = Event.distinct.left_outer_joins(:event_invites).where("events.user_id = ? OR event_invites.user_id = ?", session[:user_id], session[:user_id])
     end
     
     # Method friends
