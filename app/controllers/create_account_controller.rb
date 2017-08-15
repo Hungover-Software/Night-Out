@@ -5,7 +5,7 @@
 # Account Creation Controller (CreateAccountController)
 # Controls the actions for the createaccount/new.html.erb page
 # createaccount/new.html.erb is used to signup for a new account with the Night Out app.
-# Authors: Nathan Lyon, Logan Fitzgibbons
+# Authors: Nathan Lyon, Logan Fitzgibbons, Biraj Parajuli
 
 class CreateAccountController < ApplicationController
   

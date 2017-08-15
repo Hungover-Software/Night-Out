@@ -4,7 +4,7 @@
 # CSCI-4830-860 SU17
 # Class: User Model (User)
 # This model validates the input from the createaccount/new.html.erb web form for account signup.
-# Authors: Nathan Lyon,
+# Authors: Nathan Lyon, Biraj Parajuli
 
 class User < ApplicationRecord
     has_many :sent_requests, :class_name => :Friend, :foreign_key => 'user_sender'
